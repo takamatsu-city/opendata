@@ -33,10 +33,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Convert
+      - name: Prepare out dir
         run: |
           mkdir build
-          node bin/convert.js
+
+      - name: Pre-process CSV files
+        uses: takamatsu-city/takamatsu-city-csv2csv@v0.3
+        with:
+          csv-files: './data/*.csv'
+          out-dir: 'build'
 
       - name: Run `npm install -g csv2geojson`
         run: npm install -g csv2geojson
