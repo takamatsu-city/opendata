@@ -33,10 +33,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Prepare out dir
-        run: |
-          mkdir build
-
       - name: Pre-process CSV files
         uses: takamatsu-city/takamatsu-city-csv2csv@v0.3
         with:
@@ -49,9 +45,6 @@ jobs:
       - name: Convert CSV to GeoJSON
         run: csv2geojson 0002.csv > data.geojson
         working-directory: ./build
-
-      - name: Copy README.md
-        run: cp README.md ./build/index.md
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
