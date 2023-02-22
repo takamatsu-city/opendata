@@ -34,7 +34,7 @@ jobs:
         run: npm install
 
       - name: Convert CSV file to GeoJSON file
-        uses: takamatsu-city/takamatsu-city-csv2geojson@v0.5
+        uses: takamatsu-city/takamatsu-city-csv2geojson@v0.8.4
         with:
           csv-file: './data/0002.csv'
           geojson-file: './build/data.geojson'
