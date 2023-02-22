@@ -33,18 +33,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Pre-process CSV files
-        uses: takamatsu-city/takamatsu-city-csv2csv@v0.3
+      - name: Convert CSV file to GeoJSON file
+        uses: takamatsu-city/takamatsu-city-csv2geojson@v0.4
         with:
-          csv-files: './data/0002.csv'
-          out-dir: 'build'
-
-      - name: Run `npm install -g csv2geojson`
-        run: npm install -g csv2geojson
-
-      - name: Convert CSV to GeoJSON
-        run: csv2geojson 0002.csv > data.geojson
-        working-directory: ./build
+          csv-file: './data/0002.csv'
+          geojson-file: './build/data.geojson'
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
