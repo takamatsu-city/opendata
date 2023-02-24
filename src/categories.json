@@ -1,0 +1,11 @@
+[
+  { "category": "evacuation_space", "name": "指定緊急避難場所・指定避難所" },
+  { "category": "tsunami_evacuation_building", "name": "津波避難ビル" },
+  { "category": "citizen_disaster_prevention_center", "name": "市民防災センター" },
+  { "category": "fire_brigade", "name": "消防屯所" },
+  { "category": "fire_station", "name": "消防署・消防出張所" },
+  { "category": "aed_location", "name": "AED設置場所" },
+  { "category": "clinic", "name": "診療所" },
+  { "category": "hospital", "name": "医療機関" },
+  { "category": "municipal_hospital", "name": "市立病院" }  
+]

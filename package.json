@@ -1,0 +1,20 @@
+{
+  "name": "opendata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node src/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takamatsu-city/opendata.git"
+  },
+  "author": "",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/takamatsu-city/opendata/issues"
+  },
+  "homepage": "https://github.com/takamatsu-city/opendata#readme"
+}
