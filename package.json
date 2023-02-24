@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "csv-parse": "^5.3.5",
-    "glob": "^8.1.0"
-  }
-}
