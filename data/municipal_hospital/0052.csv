@@ -1,0 +1,12 @@
+#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0052,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/municipal_hospital,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市立みんなの病院,高松市仏生山町甲847-1,087-813-7171,http://www.takamatsu-municipal-hospital.jp/,,"34.282668,134.040965",月火水木金,08:30,17:00,祝日及び年末年始(12/29～1/3)は利用不可
+2,高松市民病院　塩江分院,高松市塩江町安原上東99-1,087-893-0031,http://tmh-shionoe.jpn.org/,,"34.171554,134.08063",月火水木金,08:40,17:00,祝日及び年末年始(12/29～1/3)は利用不可
+3,高松市夜間急病診療所,高松市松島町一丁目16-20,087-839-2299,http://www.city.takamatsu.kagawa.jp/kurashi/kyukyu/yakan/shiryojo.html,,"34.339005,134.059464",月火水木金土日,19:30,23:30,内科・小児科は毎日、耳鼻咽喉科は木曜日のみ、眼科は土曜日のみ
