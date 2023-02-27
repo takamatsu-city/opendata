@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/takamatsu-city/opendata/issues"
   },
-  "homepage": "https://github.com/takamatsu-city/opendata#readme"
+  "homepage": "https://github.com/takamatsu-city/opendata#readme",
+  "dependencies": {
+    "csv-parse": "^5.3.5",
+    "glob": "^8.1.0"
+  }
 }
