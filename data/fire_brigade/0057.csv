@@ -1,12 +1,4 @@
-#LINK,,,,,,
-#lang,ja,,,,,
-#attribution_name,高松市,,,,,
-#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,
-#file_name,0057,,,,,
-#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/fire_brigade,,,,,
 #property,name,address,telephoneNumber,referenceObject,note,location
-#object_type_xsd,string,string,string,string,string,string
-#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
 1,高松市消防団東部分団屯所,高松市観光通2-5-18,087-861-2503,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shobo/shobo/shobodan/dai1.html,,"34.33629,134.05585"
 2,高松市消防団西部分団第１部屯所,高松市番町2-19-12,087-861-2503,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shobo/shobo/shobodan/dai1.html,,"34.34487,134.03933"
 3,高松市消防団西部分団第２部屯所,高松市瀬戸内町49-14,087-861-2503,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shobo/shobo/shobodan/dai1.html,,"34.34844,134.03419"

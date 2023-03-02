@@ -1,12 +1,4 @@
-#LINK,,,,,,,,,,,,,,,,,
-#lang,ja,,,,,,,,,,,,,,,,
-#attribution_name,高松市,,,,,,,,,,,,,,,,
-#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,,,,,,,,
-#file_name,0060,,,,,,,,,,,,,,,,
-#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/evacuation_space,,,,,,,,,,,,,,,,
 #property,name,address,telephoneNumber,flood_L1,flood_L2,inundation,sedimentDisaster,stormSurge,tunami,fire,earthquake,evacuationSpace,jurisdiction,location,elevation,capacity,residentsAssociation
-#object_type_xsd,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string
-#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
 1,日新小学校跡施設,高松市瀬戸内町18-2,087-839-2611,○,△,○,○,△,△,○,○,○,地域振興課,"34.34753333,134.03003917",1.7,238,日新地区コミュニティ協議会
 2,新番丁小学校,高松市錦町2-14-1,087-851-1316,○,△,○,○,△,△,○,○,○,教育総務課,"34.34583944,134.04099361",2.9,429,二番丁地区コミュニティ協議会
 3,四番丁小学校跡施設,高松市番町1-5-1,087-823-2714,○,○,○,○,△,○,○,○,○,埋蔵文化財センター,"34.34377306,134.04579889",2.5,315,四番丁コミュニティ協議会

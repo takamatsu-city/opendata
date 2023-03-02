@@ -1,12 +1,4 @@
-#LINK,,,,,,
-#lang,ja,,,,,
-#attribution_name,高松市,,,,,
-#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,
-#file_name,0061,,,,,
-#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/tsunami_evacuation_building,,,,,
 #property,name,address,shelter,capacity,district,location
-#object_type_xsd,string,string,string,string,string,string
-#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
 1,ホテルパールガーデン,高松市福岡町二丁目2-1,２階・３階,1750,松島,"34.34657056,134.06495"
 2,ホテルマリンパレスさぬき,高松市福岡町二丁目3-4,２階・３階,1150,松島,"34.34667333,134.0657719"
 3,イオン高松東店,高松市福岡町三丁目8-5,立体駐車場の３階以上,10000,松島,"34.34510972,134.0717994"

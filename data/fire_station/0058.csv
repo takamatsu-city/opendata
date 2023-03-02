@@ -1,12 +1,4 @@
-#LINK,,,,,,
-#lang,ja,,,,,
-#attribution_name,高松市,,,,,
-#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,
-#file_name,0058,,,,,
-#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/fire_station,,,,,
 #property,name,address,telephoneNumber,referenceObject,note,location
-#object_type_xsd,string,string,string,string,string,string
-#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
 1,高松市消防局,高松市番町一丁目8-15,087-861-2500,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shobo/shobo/shobokyoku/index.html,,"34.34277,134.04654"
 2,高松市北消防署,高松市宮脇町一丁目2-34,087-861-1551,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shobo/shobo/shobokyoku/kakuka/kita/index.html,,"34.33875,134.03884"
 3,高松市北消防署朝日分署,高松市朝日町二丁目1-39,087-822-1419,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shobo/shobo/shobokyoku/kakuka/kita/kita_asahi/index.html,,"34.34755,134.06496"

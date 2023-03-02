@@ -1,12 +1,4 @@
-#LINK,,,,,,,,,,,,,,,,,,,,,,,,,
-#lang,ja,,,,,,,,,,,,,,,,,,,,,,,,
-#attribution_name,高松市,,,,,,,,,,,,,,,,,,,,,,,,
-#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,,,,,,,,,,,,,,,,
-#file_name,0062,,,,,,,,,,,,,,,,,,,,,,,,
-#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/hospital,,,,,,,,,,,,,,,,,,,,,,,,
 #property,prefCode,identification,pref,city,name,fullNameInKana,alternativeName,address,katagaki,location,telephoneNumber,extensionNumber,faxNumber,corporateNumber,corporateName,medicalCode,availableDate,medicalStartTime,medicalEndTime,availableDateNote,overtimeResponse,medicalSubjects,numberOfBeds,referenceObject,note
-#object_type_xsd,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string
-#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
 1,372013,,香川県,高松市,いわき病院,イワキビョウイン,病院,香川県高松市香南町大字由佐113-1,,",",087-879-3533,,087-879-1080,,医療法人社団以和貴会,,月火水木金,08：30,17：15,火曜日、木曜日午後休診。,,内科、心療内科、精神科、神経科、神経内科、呼吸器科、消化器科、リハビリ科、麻酔科、歯科、歯科口腔外科,237,http://www.iwaki-hospital.or.jp/,
 2,372013,,香川県,高松市,大西病院,オオニシビョウイン,病院,香川県高松市上天神町336,,",",087-866-1792,,087-865-7601,,一般財団法人大西精神衛生研究所,,月火水木金土,09：00,17：00,土曜日12：30まで。,,精神科、神経科,374,http://ohnishi-hp.or.jp/,
 3,372013,,香川県,高松市,おさか脳神経外科病院,オサカノウシンケイゲカビョウイン,病院,香川県高松市三名町378-1,,",",087-886-3300,,087-885-3038,,医療法人社団新進会,,月火水木金土,08：30（受付）,17：00（受付）,土曜日午後休診。,,内科、神経内科、循環器内科、外科、整形外科、脳神経外科、リハビリ科、放射線科、麻酔科,69,https://www.osaka-nhp.jp/,
