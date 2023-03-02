@@ -1,4 +1,4 @@
-﻿#property,name,address,installationPosition,location,telephoneNumber,availableDate,startTime,endTime,availableDateNote,equipmentForChildren
+#property,name,address,installationPosition,location,telephoneNumber,availableDate,startTime,endTime,availableDateNote,equipmentForChildren
 1,健康増進施設サラマンダー,高松市番町１丁目10-16,セントラルクリニック　２階  セントラルクリニック　４階,"34.34092056,134.04522972",,,,,,
 2,JRホテルクレメント高松,高松市浜ノ町1-1,１階ロビー,"34.35215833,134.04813444",,,,,,
 3,イオン綾川ショッピングセンター,綾歌郡綾川町萱原822-1,1・2・3階各モール側・ジャスコサービスセンター・ジャスコ防災センター,"34.25197,133.93018694",,,,,,
