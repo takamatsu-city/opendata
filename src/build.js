@@ -32,6 +32,11 @@ glob(csvFiles, (err, files) => {
         continue;
       }
 
+      // 空行は無視
+      if (!record[0]) {
+        continue;
+      }
+
       if (begin) {
         begin = false;
       } else {
