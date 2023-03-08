@@ -4,7 +4,7 @@ const glob = require('glob');
 
 class BuildHtml {
   run() {
-    const opendataViewerUrl = "https://geolonia.github.io/opendata-viewer/";
+    const opendataViewerUrl = "https://geolonia.github.io/opendata-editor/";
 
     let html = "<html>\n  <head><meta charset='utf-8'></head>\n  <body>\n    <ul>\n";
     for (let i = 0; i < categories.length; i++) {
