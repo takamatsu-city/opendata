@@ -1,4 +1,5 @@
 node_modules
 build/**/*.geojson
+build/**/*.json
 build/index.html
 .DS_Store
