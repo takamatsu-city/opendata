@@ -1,0 +1,37 @@
+@use "sass:math";
+
+// breakpoint
+
+//@include mobileS{}
+@mixin mobileS {
+  @media (max-width: $mobileS) {
+    @content;
+  }
+}
+
+//@include mobile{}
+@mixin mobile {
+  @media (max-width: $SCREEN_SIZE_MOBILE - 1) {
+    @content;
+  }
+}
+
+//@include tablet{}
+@mixin tablet {
+  @media (min-width: $SCREEN_SIZE_TABLET) {
+    @content;
+  }
+}
+
+//@include desktop{}
+@mixin desktop {
+  @media (min-width: $SCREEN_SIZE_PC) {
+    @content;
+  }
+}
+
+//@include fs();
+@mixin fs($size, $base: 16) {
+  font-size: $size + px;
+  font-size: math.div($size, $base) + rem;
+}

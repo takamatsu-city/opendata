@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@import "foundation/variable";
+@import "foundation/mixin";
+@import "foundation/reset";
+@import "foundation/initial";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "component/btn";
+
+@import "page/top";
+
+
+// todo
+// android検証
+// リファクタ

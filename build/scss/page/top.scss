@@ -1,0 +1,286 @@
+@import "../foundation/variable";
+@import "../foundation/mixin";
+
+.top-fv {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  @include desktop {
+    height: auto;
+  }
+}
+
+.top-copy {
+  padding: 32px 16px;
+  background-color: $BLUE;
+  color: $WHITE;
+  @include tablet {
+    padding: 48px 16px;
+    text-align: center;
+  }
+  &__heading {
+    margin: 0;
+    @include fs(24);
+    br {
+      display: none;
+    }
+    @include tablet {
+      @include fs(32);
+    }
+    @include desktop {
+      br {
+        display: inline;
+      }
+    }
+  }
+  &__txt {
+    margin: 20px auto 0;
+    max-width: 720px;
+    text-align: left;
+    @include tablet {
+      @include fs(18);
+    }
+  }
+}
+
+.top-about {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 40px 0 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include tablet {
+    padding: 60px 0 40px;
+    flex-direction: row;
+  }
+  &__item {
+    padding: 16px;
+    color: $BLUE;
+    @include tablet {
+      padding: 24px;
+      width: 50%;
+    }
+  }
+  &__heading {
+    margin: 0 0 18px;
+    @include fs(18);
+    border-bottom: 1px solid $BLUE;
+    @include tablet {
+      @include fs(24);
+    }
+  }
+}
+
+.top-openData {
+  padding: 40px 0 72px;
+  background: #000;
+  background: linear-gradient(180deg, rgba(223, 242, 255, 0) 0%, #DFF2FF 5.73%);
+  @include tablet {
+    padding: 60px 0 100px;
+  }
+  &__container {
+    max-width: 1016px;
+    margin: 32px auto 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+      position: relative;
+      margin: 40px auto 40px;
+      flex-direction: row;
+      &::before {
+        content: "";
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 1px solid rgba($BLUE, .3);
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    @include tablet {
+      max-width: 496px;
+      padding: 32px;
+    }
+  }
+  &__heading {
+    margin: 0;
+    @include fs(18);
+    .small {
+      @include fs(15);
+      font-weight: normal;
+    }
+    @include tablet {
+      @include fs(22);
+    }
+    @include desktop {
+      @include fs(24);
+      .small {
+        @include fs(20);
+      }
+    }
+  }
+  &__itemBtns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+    align-items: center;
+  }
+  &__code {
+    max-width: 1016px;
+    margin: 0 16px;
+    border-top: 1px solid rgba($BLUE, .3);
+    padding: 16px 16px 0;
+    text-align: center;
+    @include tablet {
+      padding: 60px 0 0;
+    }
+    @include desktop {
+      margin: 0 auto;
+    }
+  }
+  &__codeTxt {
+    @include fs(18);
+    margin-bottom: 20px;
+    font-weight: bold;
+    br {
+      display: none;
+    }
+    @include tablet {
+      @include fs(24);
+      br {
+        display: inline;
+      }
+    }
+  }
+}
+
+.top-info {
+  padding: 40px 16px;
+  @include tablet {
+    padding: 80px 16px;
+  }
+  &__container {
+    max-width: 1016px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    @include tablet {
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include tablet {
+      width: calc(50% - 30px);
+    }
+  }
+  &__heading {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+    padding-bottom: 4px;
+    @include fs(18);
+    color: $BLUE;
+    border-bottom: 5px solid $BLUE;
+    @include tablet {
+      @include fs(24);
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-top: 1px solid $GRAY;
+    @include fs(13);
+    @include tablet {
+      @include fs(14);
+    }
+    > dt {
+      padding: 14px 0;
+      border-bottom: 1px solid $GRAY;
+    }
+    > dd {
+      grid-column: 2;
+      margin: 0;
+      padding: 14px 0 14px 14px;
+      border-bottom: 1px solid $GRAY;
+    }
+  }
+}
+
+.top-contact {
+  margin-top: 40px;
+  padding: 40px 16px;
+  text-align: center;
+  background-color: rgba($BLUE, .8);
+  background-image: linear-gradient(to right, rgba($BLUE, .8), rgba($BLUE, .8)),
+  url(../img/bg_contact.png);
+  background-size: cover;
+  background-position: center center;
+  color: $WHITE;
+  @include tablet {
+    margin-top: 60px;
+    padding: 92px 16px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    @include tablet {
+      gap: 40px;
+    }
+  }
+  &__heading {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 20px;
+    @include fs(24);
+    border: 1px solid $WHITE;
+    @include tablet {
+      @include fs(32);
+    }
+  }
+  &__txt {
+    @include fs(16);
+    margin-bottom: 0;
+    @include tablet {
+      @include fs(22);
+    }
+    &.is-gold {
+      color: $GOLD;
+    }
+  }
+  &__address {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: $WHITE;
+    font-weight: bold;
+    @include fs(13);
+    color: $BLUE;
+    @include tablet {
+      @include fs(20);
+    }
+  }
+  &__attention {
+    @include fs(14);
+    color: $GOLD;
+    @include tablet {
+      @include fs(18);
+    }
+  }
+}

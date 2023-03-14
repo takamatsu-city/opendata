@@ -1,0 +1,13 @@
+.l-header {
+  display: flex;
+  align-items: center;
+  &__logo {
+    width: min(calc(324 / 650 * 100vw), 324px);
+  }
+  &__title {
+    color: $BLUE;
+    margin: 0 0 0 min(calc(20 / 650 * 100vw), 20px);
+    font-size: min(4.1vw, 28px);
+  }
+
+}

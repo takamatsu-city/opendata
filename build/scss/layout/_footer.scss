@@ -1,0 +1,9 @@
+.l-footer {
+  padding: 20px 0;
+  text-align: center;
+  @include fs(12);
+  color: $BLACK2;
+  @include tablet {
+    @include fs(14);
+  }
+}

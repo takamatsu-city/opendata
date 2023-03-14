@@ -1,0 +1,27 @@
+body {
+  font-family: "Lato", "Noto Sans JP", "ヒラギノ角ゴ ProN",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+    "MS PGothic", sans-serif;
+  box-sizing: border-box;
+  @include fs(14);
+  line-height: 1.5;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  @include tablet {
+    @include fs(16);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: $BLUE;
+  text-decoration: none;
+}
