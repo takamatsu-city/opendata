@@ -11,9 +11,9 @@
 
 | データ名 | CSV | GeoJSON | 地図で編集 | 説明 |
 | --- | --- | --- | --- | --- |
-| 指定緊急避難場所・指定避難所 | [CSV]() |[GeoJSON]() | [編集]()  | 緊急避難場所および避難所の場所情報 |
-| 津波避難ビル | [CSV]() |[GeoJSON]() | [編集]()  | 津波に対する高い耐震性を備えたビルの場所情報 |
-| 市民防災センター | [CSV]() |[GeoJSON]() | [編集]()  | 災害時に市民が集まることができるセンターの場所情報 |
+| 指定緊急避難場所・指定避難所 | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/evacuation_space/0060.csv) |[GeoJSON](evacuation_space/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/evacuation_space/0060.csv)  | 緊急避難場所および避難所の場所情報 |
+| 津波避難ビル | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/tsunami_evacuation_building/0061.csv) |[GeoJSON](tsunami_evacuation_building/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/tsunami_evacuation_building/0061.csv)  | 津波に対する高い耐震性を備えたビルの場所情報 |
+| 市民防災センター | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/citizen_disaster_prevention_center/0059.csv) |[GeoJSON](citizen_disaster_prevention_center/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/citizen_disaster_prevention_center/0059.csv)  | 災害時に市民が集まることができるセンターの場所情報 |
 | 消防屯所 | [CSV]() |[GeoJSON]() | [編集]()  | 地域防災力を強化するための拠点の場所情報 |
 | 消防署・消防出張所 | [CSV]() |[GeoJSON]() | [編集]()  | 消防署および消防出張所の場所情報 |
 | AED設置場所 | [CSV]() |[GeoJSON]() | [編集]()  | AED（自動体外式除細動器）の設置場所情報 |
