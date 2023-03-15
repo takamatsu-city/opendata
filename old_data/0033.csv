@@ -1,0 +1,11 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0033,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/hole,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市文化芸術ホール  （サンポートホール高松）,高松市サンポート2-1,087-825-5000,http://www.sunport-hall.jp/,改修工事のため2022年4月から2024年3月まで市民ギャラリー及びコミュニケーションプラザを除き休館します。,"34.35274583,134.04698889",月火水木金土日,09:00,22:00,ﾘﾊｰｻﾙ室及び練習室は23時まで。12/29～1/3は終日利用不可
+2,高松国分寺ホール,高松市国分寺町新名430,087-875-0162,http://kokubunji-hall.jp/,,"34.29603167,133.95952333",火水木金土日,09:00,22:00,12/29～1/3は終日利用不可

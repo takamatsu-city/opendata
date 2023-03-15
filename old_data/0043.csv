@@ -1,0 +1,10 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0043,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/athletics_stadium,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市屋島競技場,高松市屋島中町374-1,087-802-7350,http://www.jit-net.biz/data/yashima-f/,,"34.34082194,134.10196639",月火水木金土日,09:00,21:00,補助競技場は17:00まで（6～8月は19:00まで）、写真判定室、放送室、記録室、スタッフルームは17:00まで

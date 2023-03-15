@@ -1,0 +1,13 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0026,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/city_bicycle_parking,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市立瓦町地下自転車駐車場,高松市常磐町一丁目3-3,087-837-1775,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/anzen/churinjo/index.html,,"34.33882,134.05243",月火水木金土日,06:00,23:00,
+2,高松市立高松駅前広場地下自転車駐車場,高松市浜ノ町1-17,087-821-0400,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/anzen/churinjo/index.html,,"34.35151,134.04796",月火水木金土日,04:00,02:00,
+3,高松市立栗林公園駅前自転車駐車場,高松市栗林町三丁目6-10,087-833-1801,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/anzen/churinjo/index.html,,"34.32883,134.05089",月火水木金土日,06:00,23:00,
+4,高松市立端岡駅前自転車駐車場,高松市国分寺町新居472-2,087-875-0025,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/anzen/churinjo/index.html,,"34.30523,133.96806",月火水木金土日,06:00,23:00,

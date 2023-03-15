@@ -1,0 +1,11 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0020,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/other_child_care_support_facility,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,たかまつファミリー・サポート・センター,高松市松島町一丁目１５番１号  （たかまつミライエ３階）,087-833-2226,http://happy192.com,,"34.33998,134.05955",月水木金土日,09:00,17:00,
+2,児童養護施設　讃岐学園,高松市前田東町569-2,087-847-5171,http://www.kouzenkai.jp/sanukigakuen/,,"34.29170722,134.1199475",,,,

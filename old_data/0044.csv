@@ -1,0 +1,11 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0044,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/amuseum,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市美術館,高松市紺屋町10-4,087-823-1711,https://www.city.takamatsu.kagawa.jp/museum/takamatsu/,,"34.34407,134.04922",火水木金土日,09:30,17:00,月曜日（祝日の場合は翌平日）、年末年始（12/29～1/3）は休館日。※特別展開催期間中の金・土曜日は19:00まで、※展示室への入室は、閉館30分前まで
+2,高松市塩江美術館,高松市塩江町安原上602,087-893-1800,https://www.city.takamatsu.kagawa.jp/museum/shionoe/,,"34.17565,134.08131",火水木金土日,09:00,17:00,月曜日（祝日の場合は翌平日）、年末年始（12/29～1/3）は休館日。※入館は16:30まで

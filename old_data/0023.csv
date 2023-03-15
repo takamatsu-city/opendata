@@ -1,0 +1,13 @@
+﻿#LINK,,,,,,
+#lang,ja,,,,,
+#attribution_name,高松市,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,
+#file_name,0023,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/university,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location
+#object_type_xsd,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,香川大学,高松市幸町1-1,087-832-1000,,,"34.34247611,134.03780528"
+2,高松大学・高松短期大学,高松市春日町960,087-841-3255,,,"34.32875889,134.08769667"
+3,香川県立保健医療大学,高松市牟礼町原281-1,087-870-1212,,,"34.32238194,134.15811694"
+4,香川大学工学部,高松市林町2217-20,087-864-2000,,,"34.29299806,134.064075"

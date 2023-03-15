@@ -1,0 +1,11 @@
+﻿#LINK,,,,,,
+#lang,ja,,,,,
+#attribution_name,高松市,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,
+#file_name,0010,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/meat_center,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location
+#object_type_xsd,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市食肉センター,高松市郷東町587-197,087-832-8060,,,"34.35406306,134.02000639"
+2,高松市食肉衛生検査所,高松市郷東町587-197,087-832-8010,http://www.city.takamatsu.kagawa.jp/3393.html,,"34.35406306,134.02003417"

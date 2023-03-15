@@ -1,0 +1,17 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0025,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/municipal_parking,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市立中央駐車場,高松市番町一丁目11-22,087-862-2285,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shiei/index.html,,"34.34135,134.04648",月火水木金土日,07:30,22:00,年中無休
+2,高松市立南部駐車場,高松市観光通一丁目1-15,087-837-0500,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shiei/index.html,,"34.33717,134.04979",月火水木金土日,00:00,24:00,年中無休
+3,高松市立美術館駐車場,高松市紺屋町10-4,087-823-1721,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shiei/index.html,,"34.34409,134.04917",月火水木金土日,07:30,23:00,年中無休
+4,高松市立杣場川駐車場,高松市城東町一丁目5-12,087-823-2585,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shiei/index.html,,"34.34671,134.05871",月火水木金土日,00:00,24:00,年中無休
+5,高松市立瓦町駅地下,高松市常磐町一丁目3-1,087-862-2295,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shiei/index.html,,"34.33895,134.05255",月火水木金土日,07:30,22:00,年中無休
+6,高松市立高松駅前広場地下駐車場,高松市浜ノ町1-17,087-821-0400,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shiei/index.html,,"34.35151,134.04796",月火水木金土日,06:30,24:00,年中無休
+7,高松市立高松シンボルタワー地下駐車場,高松市サンポート2-1,087-821-0400,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shiei/index.html,,"34.35294,134.0462",月火水木金土日,06:30,24:00,年中無休
+8,高松市立高松駅南交通広場駐車場,高松市浜ノ町1-31,087-821-0400,http://www.city.takamatsu.kagawa.jp/kurashi/shinotorikumi/machidukuri/kasseika/ekinan.html,,"34.34996,134.04651",月火水木金土日,00:00,24:00,年中無休

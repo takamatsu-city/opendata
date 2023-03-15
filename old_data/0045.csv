@@ -1,0 +1,16 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0045,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/regional_comprehensive_support_center,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,地域包括支援センター（高松市保健センター１階）,高松市桜町一丁目9-12,087-839-2811,https://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisetsu/hokatsu.html,,"34.33040083,134.05183528",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。
+2,地域包括支援センターサブセンター仏生山（仏生山交流センター1階）,高松市仏生山町甲218-1,087-889-7788,https://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisetsu/hokatsu.html,,"34.28427209709954,134.04093382459948",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。
+4,地域包括支援センターサブセンター山田（山田支所南側）,高松市川島本町191-13,087-848-6451,https://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisetsu/hokatsu.html,,"34.27597056,134.08559472",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。
+5,地域包括支援センターサブセンター勝賀（ふれあい福祉センター勝賀内）,高松市香西南町476-1,087-882-7401,https://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisetsu/hokatsu.html,,"34.34211111,134.00072806",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。
+6,地域包括支援センターサブセンター香川（香川総合センター内）,高松市香川町川東上1865-13,087-879-0991,https://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisetsu/hokatsu.html,,"34.24136389,134.03400861",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。
+7,地域包括支援センターサブセンター牟礼（牟礼総合センター２階）,高松市牟礼町牟礼302-1,087-845-5711,https://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisetsu/hokatsu.html,,"34.33796833,134.13929611",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。
+8,地域包括支援センターサブセンター国分寺（国分寺総合センター内）,高松市国分寺町新居1298,087-874-8961,https://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisetsu/hokatsu.html,,"34.29721,133.96026083",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。

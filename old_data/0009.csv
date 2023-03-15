@@ -1,0 +1,10 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0009,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/market,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,中央卸売市場管理棟,高松市瀬戸内町30-5,087-862-3411,http://www.city.takamatsu.kagawa.jp/kurashi/shinotorikumi/soshikihyo/shijo.html,,"34.34816028,134.02853278",月火水木金土,08:30,17:00,

@@ -1,0 +1,17 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0037,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/other_sports_facilities,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市香川屋外球技場,高松市香川町川東下1928-1,087-879-8000,http://www.taka-spo.or.jp/kok1.html,,"34.25498167,134.0296939",火水木金土日,09:00,21:00,
+2,高松市国分寺橘ノ丘総合運動公園屋内ゲートボール場,高松市国分寺町新名2069-1,087-874-4311,http://www.taka-spo.or.jp/bg8.html,,"34.27234694,133.9516867",火水木金土日,09:00,21:00,
+3,高松市ヨット競技場,高松市浜ノ町67-1,087-822-1668,http://www.taka-spo.or.jp/yac1.html,,"34.35193056,134.0419433",月水木金土日,08:30,20:00,会議室は年間09:00から20:00まで、競技場は11～2月は17:00まで
+4,高松市国分寺橘ノ丘総合運動公園勤労者野外活動施設,高松市国分寺町新名2069-1,087-874-4311,http://www.taka-spo.or.jp/bg9.html,,"34.27190194,133.9503567",火水木金土日,09:00,21:00,テニスコートは21:00まで、多目的ホール及び研修室は22:00まで
+5,サンポートスケートパーク  SUSPA,高松市サンポート5,087-839-2445,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/sports/sasupa.html,,"34.35409639,134.0454578",月火水木金土日,09:00,22:00,
+6,高松市庵治ゲートボール場,高松市庵治町1667番地1,087-845-7060,,,"34.3845802,134.1346368",月火水木金土日,09:00,21:00,
+7,高松市庵治ペタンク場,高松市庵治町3836番地,087-845-7060,,,"34.3787,134.138343",月火水木金土日,,,利用可能時間は日出から日没まで
+8,高松市国分寺橘ノ丘総合運動公園はくちょう温泉,高松市国分寺町新名2213番地1,087-874-4311,http://www.taka-spo.or.jp/hak1.html,,"34.271497,133.950865",火水木金土日,10:00,20:00,

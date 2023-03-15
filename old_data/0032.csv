@@ -1,0 +1,11 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0032,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/citizen_service_center,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市役所本庁舎,高松市番町一丁目8番15号,087-839-2011,http://www.city.takamatsu.kagawa.jp/,,"34.343092,134.046553",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日）は終日利用不可。
+2,高松市市民サービスセンター（瓦町ＦＬＡＧ８階　市民交流プラザＩＫＯＤＥ瓦町内）,高松市常磐町一丁目3番地1,087-863-2888,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/ikode/service_center.html,,"34.339467,134.052521",月火水木金土日,10:00,20:00,土曜日・日曜日・休日は10時から18時30分まで。業務ごとに時間等が異なりますので、詳しくは市民サービスセンターにお問い合わせください。年末年始（12月29日から翌年の1月3日）は終日利用不可。

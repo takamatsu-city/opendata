@@ -1,0 +1,16 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0024,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/bictcle_rental_port,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市立瓦町地下レンタサイクルポート,高松市常磐町一丁目3-3,087-837-1775,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/bicycle/rental_cycle/index.html,,"34.33882,134.05243",月火水木金土日,07:00,23:00,年中無休
+2,高松市立高松駅前広場地下レンタサイクルポート,高松市浜ノ町1-17,087-821-0400,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/bicycle/rental_cycle/index.html,,"34.35151,134.04796",月火水木金土日,07:00,23:00,年中無休
+3,高松市立市役所レンタサイクルポート,高松市番町一丁目8-15,,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/bicycle/rental_cycle/index.html,,"34.34241,134.04703",月火水木金土日,07:00,22:00,年中無休
+4,高松市立栗林公園駅前レンタサイクルポート,高松市栗林町三丁目6-10,087-833-1801,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/bicycle/rental_cycle/index.html,,"34.32883,134.05089",月火水木金土日,07:00,23:00,年中無休
+5,高松市立栗林駅前レンタサイクルポート,高松市藤塚町三丁目19-48,,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/bicycle/rental_cycle/index.html,,"34.33222,134.05211",月火水木金土日,07:00,22:00,年中無休
+6,高松市立片原町駅前レンタサイクルポート,高松市内町5-9,,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/bicycle/rental_cycle/index.html,,"34.34601,134.05405",月火水木金土日,07:00,22:00,年中無休
+7,高松市立丸亀町レンタサイクルポート,高松市丸亀町8-23,,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/koutsu/bicycle/rental_cycle/index.html,,"34.3419,134.04975",月火水木金土日,07:00,22:00,年中無休

@@ -1,0 +1,16 @@
+﻿#LINK,,,,,,
+#lang,ja,,,,,
+#attribution_name,高松市,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,
+#file_name,0014,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/school_lunch_kitchen,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location
+#object_type_xsd,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市朝日新町学校給食センター,高松市朝日新町26-25,087-811-6300,,,"34.35965667,134.06521694"
+2,高松市立山田学校給食共同調理場,高松市川島東町1254,087-848-0168,,,"34.26666278,134.09266"
+3,高松市立牟礼学校給食共同調理場,高松市牟礼町大町1576-1,087-845-2571,,,"34.33569528,134.14251278"
+4,高松市立庵治学校給食共同調理場,高松市庵治町782-2,087-871-2247,,,"34.3844225,134.13048139"
+5,高松市立香川学校給食共同調理場,高松市香川町浅野1283-3,087-879-5387,,,"34.24981944,134.03288722"
+6,高松市立香南学校給食共同調理場,高松市香南町横井800-1,087-879-2179,,,"34.24309222,134.00746361"
+7,高松市六条町学校給食センター,高松市六条町700番地,087-865-1060,,,"34.295993,134.078751"

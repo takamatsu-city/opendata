@@ -1,0 +1,11 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0016,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/lifelong_learning_facility,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市生涯学習センター「まなびCAN」（むうぶ片原町ビル内）,高松市片原町11-1,087-811-6222,http://www.city.takamatsu.kagawa.jp/kurashi/kosodate/shougai_gakushu/manabican/index.html,,"34.34541,134.05352972",火水木金土日,09:00,22:00,日曜日、祝日は17:00まで利用可。月曜日が祝日の場合は利用可、ただし火曜日が利用不可。12/29～1/3は利用不可。
+2,高松市ふれあい創作館,高松市香川町川内原2146-1,,http://www.city.takamatsu.kagawa.jp/kurashi/kosodate/shougai_gakushu/fureiakan.html,,"34.21979,134.05119361",月火水木金土日,09:00,22:00,祝日、12/29～1/3は終日利用不可
