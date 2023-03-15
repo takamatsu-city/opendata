@@ -18,10 +18,10 @@ class BuildReadme {
 
       const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
       const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
-      const jsonFile = `${category.category}/data.geojson`
+      const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`
       const mapUrl = `${opendataViewerUrl}?data=${csvFileUrl}`;
 
-      readme += `| ${category.name} | [CSV](${csvFileUrl}) |[GeoJSON](${jsonFile}) | [編集](${mapUrl}) | ${category.description} |\n`;
+      readme += `| ${category.name} | [CSV](${csvFileUrl}) |[GeoJSON](${jsonFileUrl}) | [編集](${mapUrl}) | ${category.description} |\n`;
     }
 
     readme += "\n以下のデータは位置情報を含まないデータです。\n\n";
@@ -34,11 +34,11 @@ class BuildReadme {
       const jsonFiles = `build/${category.category}/*.json`;
       glob.sync(jsonFiles).map(file => {
         const date = path.basename(file, '.json');
-        const jsonFile = `${category.category}/${date}.json`
+        const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${date}.json`
         const csvFile = `data/${category.category}/${date}.csv`
         const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
 
-        readme += `| ${category.name}(${date}) | [CSV](${csvFileUrl}) | [JSON](${jsonFile}) | [過去データ]() | ${category.description} |\n`
+        readme += `| ${category.name}(${date}) | [CSV](${csvFileUrl}) | [JSON](${jsonFileUrl}) | [過去データ]() | ${category.description} |\n`
       });
     }
 
