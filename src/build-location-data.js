@@ -2,6 +2,7 @@ const fs = require('fs');
 const { parse } = require('csv-parse');
 const glob = require('glob');
 const path = require('path');
+const csv2geojson = require('csv2geojson');
 
 const categories = require('./location-data-categories.json');
 
@@ -20,51 +21,12 @@ for (let i = 0; i < categories.length; i++) {
       }
       const dest = fs.createWriteStream(`${categoryPath}/data.geojson`);
 
-      const parser = fs
-        .createReadStream(file)
-        .pipe(parse())
+      const csvString = fs.readFileSync(file, 'utf8');
 
-      let headers = [];
-      dest.write('{"type":"FeatureCollection","features":[');
-      let begin = true;
-      for await (const record of parser) {
-        if (record[0]  === '#property') {
-          headers = record;
-        }
-        // #から始まる行は無視
-        if (/#/.test(record[0])) {
-          continue;
-        }
-
-        // 空行は無視
-        if (!record[0]) {
-          continue;
-        }
-
-        if (begin) {
-          begin = false;
-        } else {
-          dest.write(",");
-        }
-
-        const properties = headers.reduce((map, header) => {
-          map[header] = record[headers.indexOf(header)];
-          return map;
-        }, {});
-        const coordinates = record[headers.indexOf('location')].split(',').map(value => Number(value))
-
-        dest.write(JSON.stringify(
-          {
-            "type": "Feature",
-            "properties": properties,
-            "geometry": {
-              "coordinates": [coordinates[1], coordinates[0]],
-              "type": "Point"
-            }
-          }
-        ));
-      }
-      dest.write("]}");
+      csv2geojson.csv2geojson(csvString, function(err, data) {
+        if (err) throw err;
+        dest.write(JSON.stringify(data));
+      });
     });
   });
 }
