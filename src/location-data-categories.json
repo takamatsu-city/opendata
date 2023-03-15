@@ -1,11 +1,11 @@
 [
-  { "category": "evacuation_space", "name": "指定緊急避難場所・指定避難所" },
-  { "category": "tsunami_evacuation_building", "name": "津波避難ビル" },
-  { "category": "citizen_disaster_prevention_center", "name": "市民防災センター" },
-  { "category": "fire_brigade", "name": "消防屯所" },
-  { "category": "fire_station", "name": "消防署・消防出張所" },
-  { "category": "aed_location", "name": "AED設置場所" },
-  { "category": "clinic", "name": "診療所" },
-  { "category": "hospital", "name": "医療機関" },
-  { "category": "municipal_hospital", "name": "市立病院" }  
+  { "category": "aed_location", "name": "AED設置場所", "filename": "0002.xlsx","description": "AED（自動体外式除細動器）の設置場所情報" },
+  { "category": "municipal_hospital", "name": "市立病院", "filename": "0052.xlsx", "description": "市立病院の場所情報" },
+  { "category": "clinic", "name": "診療所", "filename": "0055.xlsx", "description": "診療所の場所情報" },
+  { "category": "fire_brigade", "name": "消防屯所", "filename": "0057.xlsx", "description": "地域防災力を強化するための拠点の場所情報" },
+  { "category": "fire_station", "name": "消防署・消防出張所", "filename": "0058.xlsx", "description": "消防署および消防出張所の場所情報" },
+  { "category": "citizen_disaster_prevention_center", "name": "市民防災センター", "filename": "0059.xlsx", "description": "災害時に市民が集まることができるセンターの場所情報" },
+  { "category": "evacuation_space", "name": "指定緊急避難場所・指定避難所", "filename": "0060.xlsx", "description": "緊急避難場所および避難所の場所情報" },
+  { "category": "tsunami_evacuation_building", "name": "津波避難ビル", "filename": "0061.xlsx", "description": "津波に対する高い耐震性を備えたビルの場所情報" },
+  { "category": "hospital", "name": "医療機関", "filename": "0062.xlsx", "description": "医療機関の場所情報" }
 ]
