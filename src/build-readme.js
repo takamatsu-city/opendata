@@ -18,31 +18,32 @@ class BuildReadme {
 
       const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
       const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
-      const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`
+      const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`;
       const mapUrl = `${opendataViewerUrl}?data=${csvFileUrl}`;
 
       readme += `| ${category.name} | [CSV](${csvFileUrl}) |[GeoJSON](${jsonFileUrl}) | [編集](${mapUrl}) | ${category.description} |\n`;
     }
 
     readme += "\n以下のデータは位置情報を含まないデータです。\n\n";
-    readme += "| データ名 | 最新版CSV | 最新版JSON | 過去データ一覧 | 説明 |\n";
-    readme += "| --- | --- | --- | --- | --- |\n";
+    readme += "| データ名 | CSV | GeoJSON | 説明 |\n";
+    readme += "| --- | --- | --- | --- |\n";
 
     for (let i = 0; i < standardDataCategories.length; i++) {
       const category = standardDataCategories[i];
 
-      const jsonFiles = `build/${category.category}/*.json`;
-      glob.sync(jsonFiles).map(file => {
-        const date = path.basename(file, '.json');
-        const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${date}.json`
-        const csvFile = `data/${category.category}/${date}.csv`
+      const csvFiles = `data/${category.category}/${category.filename}_*.csv`;
+      glob.sync(csvFiles).map(file => {
+        const filename = path.basename(file, '.csv');
+        const date = filename.split('_')[1];
+        const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
+        const csvFile = `data/${category.category}/${filename}.csv`
         const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
 
-        readme += `| ${category.name}(${date}) | [CSV](${csvFileUrl}) | [JSON](${jsonFileUrl}) | [過去データ]() | ${category.description} |\n`
+        readme += `| ${category.name}(${date}) | [CSV](${csvFileUrl}) | [JSON](${jsonFileUrl}) | ${category.description} |\n`;
       });
     }
 
-    fs.writeFileSync("README.md" , readme)
+    fs.writeFileSync("README.md" , readme);
   }
 }
 

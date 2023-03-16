@@ -82,9 +82,10 @@
 
 以下のデータは位置情報を含まないデータです。
 
-| データ名 | 最新版CSV | 最新版JSON | 過去データ一覧 | 説明 |
-| --- | --- | --- | --- | --- |
-| 地域・年齢別人口(202302) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/population/202302.csv) | [JSON](https://opendata.takamatsu-fact.com/population/202302.json) | [過去データ]() | 高松市内の町別、性別別、年齢別の人口情報 |
-| 地域・年齢別人口(202303) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/population/202303.csv) | [JSON](https://opendata.takamatsu-fact.com/population/202303.json) | [過去データ]() | 高松市内の町別、性別別、年齢別の人口情報 |
-| 学校給食献立情報(202302) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/menu_information/202302.csv) | [JSON](https://opendata.takamatsu-fact.com/menu_information/202302.json) | [過去データ]() | 高松市内の学校の給食情報を毎月更新 |
-| 学校給食献立情報(202303) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/menu_information/202303.csv) | [JSON](https://opendata.takamatsu-fact.com/menu_information/202303.json) | [過去データ]() | 高松市内の学校の給食情報を毎月更新 |
+| データ名 | CSV | GeoJSON | 説明 |
+| --- | --- | --- | --- |
+| 地域・年齢別人口(201811) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/population/0066_201811.csv) | [JSON](https://opendata.takamatsu-fact.com/population/0066_201811.json) | 高松市内の町別、性別別、年齢別の人口情報 |
+| 地域・年齢別人口(202302) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/population/0066_202302.csv) | [JSON](https://opendata.takamatsu-fact.com/population/0066_202302.json) | 高松市内の町別、性別別、年齢別の人口情報 |
+| 地域・年齢別人口(202303) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/population/0066_202303.csv) | [JSON](https://opendata.takamatsu-fact.com/population/0066_202303.json) | 高松市内の町別、性別別、年齢別の人口情報 |
+| 学校給食献立情報(202302) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/menu_information/0084_202302.csv) | [JSON](https://opendata.takamatsu-fact.com/menu_information/0084_202302.json) | 高松市内の学校の給食情報を毎月更新 |
+| 学校給食献立情報(202303) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/menu_information/0084_202303.csv) | [JSON](https://opendata.takamatsu-fact.com/menu_information/0084_202303.json) | 高松市内の学校の給食情報を毎月更新 |
