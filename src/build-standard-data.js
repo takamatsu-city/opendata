@@ -13,7 +13,7 @@ for (let i = 0; i < categories.length; i++) {
 
   glob(csvFiles, (err, files) => {
     files.forEach(async file => {
-      const filename = path.basename(file, '.csv').split('_')[1];
+      const filename = path.basename(file, '.csv');
       const categoryPath = `${outDir}/${category}`;
       if (!fs.existsSync(categoryPath)) {
         fs.mkdirSync(categoryPath, { recursive: true });
