@@ -1,0 +1,16 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0071,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/regional_exchange_center,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,高松市牟礼南会館,高松市牟礼町大町1008-2,087-845-1160,,,"34.3367,134.155543",月火水木金土日,09:00,22:00,日曜日は17:00まで。国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日まで）は利用不可。
+2,高松市庵治やすらぎ会館,高松市庵治町6392-14,087-871-5111,,,"34.38297056,134.12712111",月火水木金土日,09:00,22:00,国民の祝日に関する法律に規定する休日及び年末年始（１２月２９日から翌年の１月３日まで）は利用不可。
+3,高松市香川町グリーンセンター,高松市香川町川東上604-85,087-879-5597,,,"34.22676139,134.03778111",火水木金土日,09:00,22:00,年末年始（12月29日から翌年の1月3日まで）は利用不可。
+4,高松市国分寺会館,高松市国分寺町新名430-2,087-874-1111,,,"34.29663222,133.96011083",火水木金土日,09:00,21:00,月曜日と年末年始（１２月２９日から翌年の１月３日まで）は利用不可。ただし月曜日が国民の祝日に関する法律に規定する休日に当たるときは、その日後においてその日に最も近い休日でない日とする。
+5,高松市新居会館,高松市国分寺町新居387-2,087-874-7202,,,"34.30128,133.9699",月火水木金土日,09:00,22:00,日曜日は17:00まで。国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日まで）は利用不可。
+6,高松市福家会館,高松市国分寺町福家乙21-43,087-874-6805,,,"34.29422,133.97525",月火水木金土日,09:00,22:00,日曜日は17:00まで。国民の祝日に関する法律に規定する休日及び年末年始（12月29日から翌年の1月3日まで）は利用不可。
+7,高松市男木交流館,高松市男木町1986,087-873-0006,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shimin_katsudo/shimindandai/sonota/ogi/index.html,,"34.42221861,134.05416972",月火水木金土日,06:30,17:00,無休

@@ -1,0 +1,14 @@
+﻿#LINK,,,,,,,,,,
+#lang,ja,,,,,,,,,
+#attribution_name,高松市,,,,,,,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,,,,,,,
+#file_name,0070,,,,,,,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/general_center,,,,,,,,,
+#property,name,address,telephoneNumber,referenceObject,note,location,availableDate,startTime,endTime,availableDateNote
+#object_type_xsd,string,string,string,string,string,string,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion,Assertion
+1,牟礼総合センター,高松市牟礼町牟礼302-1,087-845-2111　,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisho/sougou_center.html,,"34.33760917,134.1396325",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（１２月２９日から翌年の１月３日まで）は利用不可。
+2,仏生山総合センター,高松市仏生山甲218番地1,087-889-4907,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisho/sougou_center.html,,"34.284376,134.040571",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（１２月２９日から翌年の１月３日まで）は利用不可。
+3,香川総合センター,高松市香川町川東上1865-13,087-879-3211,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisho/sougou_center.html,,"34.24136389,134.03400861",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（１２月２９日から翌年の１月３日まで）は利用不可。
+4,勝賀総合センター,高松市香西南町476-1,087-882-7770,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisho/sougou_center.html,,"34.342355,134.000785",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（１２月２９日から翌年の１月３日まで）は利用不可。
+5,国分寺総合センター,高松市国分寺町新居1298,087-874-1111,http://www.city.takamatsu.kagawa.jp/kurashi/kurashi/shisetsu/shisho/sougou_center.html,,"34.29721,133.96026083",月火水木金,08:30,17:00,国民の祝日に関する法律に規定する休日及び年末年始（１２月２９日から翌年の１月３日まで）は利用不可。

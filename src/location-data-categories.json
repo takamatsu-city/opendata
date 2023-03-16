@@ -59,5 +59,13 @@
   { "category": "citizen_disaster_prevention_center", "name": "市民防災センター", "filename": "0059.xlsx", "description": "災害時に市民が集まることができるセンターの場所情報" },
   { "category": "evacuation_space", "name": "指定緊急避難場所・指定避難所", "filename": "0060.xlsx", "description": "緊急避難場所および避難所の場所情報" },
   { "category": "tsunami_evacuation_building", "name": "津波避難ビル", "filename": "0061.xlsx", "description": "津波に対する高い耐震性を備えたビルの場所情報" },
-  { "category": "hospital", "name": "医療機関", "filename": "0062.xlsx", "description": "医療機関の場所情報" }
+  { "category": "hospital", "name": "医療機関", "filename": "0062.xlsx", "description": "医療機関の場所情報" },
+  { "category": "cultural_property", "name": "文化財", "filename": "0063.xlsx", "description": "" },
+  { "category": "public_wireless_lan", "name": "公衆無線LANアクセスポイント", "filename": "0064.xlsx", "description": "" },
+  { "category": "public_toilet", "name": "公衆トイレ", "filename": "0065.xlsx", "description": "" },
+  { "category": "contact_center", "name": "ふれあいセンター", "filename": "0069.xlsx", "description": "" },
+  { "category": "general_center", "name": "総合センター", "filename": "0070.xlsx", "description": "" },
+  { "category": "regional_exchange_center", "name": "地域交流館", "filename": "0071.xlsx", "description": "" },
+  { "category": "shopping_street_traffic_information", "name": "商店街通行量情報", "filename": "0073.xlsx", "description": "" },
+  { "category": "polling_place_list", "name": "投票所一覧", "filename": "0075.xlsx", "description": "" }
 ]
