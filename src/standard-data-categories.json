@@ -1,4 +1,4 @@
 [
-  { "category": "population", "name": "地域・年齢別人口", "description": "高松市内の町別、性別別、年齢別の人口情報" },
-  { "category": "menu_information", "name": "学校給食献立情報", "description": "高松市内の学校の給食情報を毎月更新" }
+  { "category": "population", "name": "地域・年齢別人口", "filename": "0066", "description": "高松市内の町別、性別別、年齢別の人口情報" },
+  { "category": "menu_information", "name": "学校給食献立情報", "filename": "0084", "description": "高松市内の学校の給食情報を毎月更新" }
 ]

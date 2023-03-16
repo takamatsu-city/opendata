@@ -8,7 +8,9 @@
     "build-location-data": "node src/build-location-data.js",
     "build-standard-data": "node src/build-standard-data.js",
     "build-readme": "node src/build-readme.js",
-    "convert-location-data": "node src/convert-location-data.js"
+    "convert-location-data": "node src/convert-location-data.js",
+    "convert-standard-data": "node src/convert-standard-data.js"
+    
   },
   "repository": {
     "type": "git",
