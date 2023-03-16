@@ -446,25 +446,28 @@ a {
   padding: 32px 16px;
   background-color: #015591;
   color: #fff;
+  background: url(../img/img_fv.jpg) center;
+  background-size: cover;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5),0 0 4px rgba(0, 0, 0, 0.5),0 0 4px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 768px) {
   .top-copy {
-    padding: 48px 16px;
+    padding: 72px 16px;
     text-align: center;
   }
 }
 .top-copy__heading {
   margin: 0;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 .top-copy__heading br {
   display: none;
 }
 @media (min-width: 768px) {
   .top-copy__heading {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 30px;
+    font-size: 1.87rem;
   }
 }
 @media (min-width: 992px) {
