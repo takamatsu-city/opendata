@@ -29,23 +29,35 @@ class BuildApi {
       );
     }
 
-    // for (let i = 0; i < standardDataCategories.length; i++) {
-    //   const category = standardDataCategories[i];
+    for (let i = 0; i < standardDataCategories.length; i++) {
+      const category = standardDataCategories[i];
 
-    //   const csvFilesPattern = `data/${category.category}/${category.filename}*.csv`;
+      const csvFilesPattern = `data/${category.category}/${category.filename}*.csv`;
 
-    //   // 最新順にソート
-    //   const csvFiles = glob.sync(csvFilesPattern).reverse();
+      // 最新順にソート
+      const csvFiles = glob.sync(csvFilesPattern).reverse();
 
-    //   csvFiles.map(file => {
-    //     const filename = path.basename(file, '.csv');
-    //     const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
-    //     const csvFile = `data/${category.category}/${filename}.csv`
-    //     const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
+      const csvs = []
+      const jsons = []
+      csvFiles.map(file => {
+        const filename = path.basename(file, '.csv');
+        const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
+        const csvFile = `data/${category.category}/${filename}.csv`
+        const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
+        csvs.push(csvFileUrl)
+        jsons.push(jsonFileUrl);
+      });
 
-    //     readme += `| ${category.name}(${filename}) | [CSV](${csvFileUrl}) | [JSON](${jsonFileUrl}) | ${category.description} |\n`;
-    //   });
-    // }
+      data.push(
+        {
+          "id": category.filename,
+          "name": category.name,
+          "csv": csvs.length > 1 ? csvs : csvs[0],
+          "json": jsons.length > 1 ? jsons : jsons[0],
+          "location": false
+        }
+      )
+    }
 
     console.log(data);
     const dest = fs.createWriteStream(`build/index.json`);
