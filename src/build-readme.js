@@ -31,15 +31,18 @@ class BuildReadme {
     for (let i = 0; i < standardDataCategories.length; i++) {
       const category = standardDataCategories[i];
 
-      const csvFiles = `data/${category.category}/${category.filename}_*.csv`;
-      glob.sync(csvFiles).map(file => {
+      const csvFilesPattern = `data/${category.category}/${category.filename}*.csv`;
+
+      // 最新順にソート
+      const csvFiles = glob.sync(csvFilesPattern).reverse();
+
+      csvFiles.map(file => {
         const filename = path.basename(file, '.csv');
-        const date = filename.split('_')[1];
         const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
         const csvFile = `data/${category.category}/${filename}.csv`
         const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
 
-        readme += `| ${category.name}(${date}) | [CSV](${csvFileUrl}) | [JSON](${jsonFileUrl}) | ${category.description} |\n`;
+        readme += `| ${category.name}(${filename}) | [CSV](${csvFileUrl}) | [JSON](${jsonFileUrl}) | ${category.description} |\n`;
       });
     }
 

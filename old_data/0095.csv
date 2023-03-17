@@ -1,0 +1,14 @@
+﻿#LINK,,,,
+#lang,ja,,,
+#attribution_name,高松市,,,
+#license,http://creativecommons.org/licenses/by/3.0/deed.ja,,,
+#file_name,0095,,,
+#download_from,https://opendata.smartcity-takamatsu.jp/ckan/dataset/number_of_primary_insured,,,
+#property,address,date,numberOfPrimaryInsured,numberOfPeopleCertifiedForLongTermCare
+#object_type_xsd,string,string,string,string
+#property_context,Assertion,Assertion,Assertion,Assertion
+1,高松市,10/1/2017,115054,23870
+2,高松市,10/1/2018,116669,24830
+3,高松市,10/1/2019,117569,25068
+4,高松市,10/1/2020,118602,24826
+5,高松市,10/1/2021,119526,25105

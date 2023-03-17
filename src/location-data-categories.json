@@ -67,5 +67,11 @@
   { "category": "general_center", "name": "総合センター", "filename": "0070.xlsx", "description": "" },
   { "category": "regional_exchange_center", "name": "地域交流館", "filename": "0071.xlsx", "description": "" },
   { "category": "shopping_street_traffic_information", "name": "商店街通行量情報", "filename": "0073.xlsx", "description": "" },
-  { "category": "polling_place_list", "name": "投票所一覧", "filename": "0075.xlsx", "description": "" }
+  { "category": "polling_place_list", "name": "投票所一覧", "filename": "0075.xlsx", "description": "" },
+  { "category": "agricultural_facilities_list", "name": "農業施設一覧", "filename": "0076.xlsx", "description": "" },
+  { "category": "road_station_list", "name": "道の駅一覧", "filename": "0077.xlsx", "description": "" },
+  { "category": "company_led_childcare_facilities_list", "name": "企業主導型保育施設一覧", "filename": "0078.xlsx", "description": "" },
+  { "category": "unapproved_childcare_facilities", "name": "認可外保育施設一覧", "filename": "0079.xlsx", "description": "" },
+  { "category": "recycling_box_installation_location", "name": "使用済小型家電リサイクルBOX設置場所一覧", "filename": "0086.xlsx", "description": "" },
+  { "category": "list_of_designated_collection_bag_dealers", "name": "指定収集袋取扱店一覧", "filename": "0098.xlsx", "description": "" }
 ]

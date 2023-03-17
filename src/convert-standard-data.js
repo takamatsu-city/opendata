@@ -12,7 +12,7 @@ const main = async () => {
   for (let i = 0; i < categories.length; i++) {
     const category = categories[i].category;
 
-    csvFiles = glob.sync(`old_data/${categories[i].filename}_*.xlsx`)
+    csvFiles = glob.sync(`old_data/${categories[i].filename}*.xlsx`)
     for (let j = 0; j < csvFiles.length; j++) {
 
       const file = csvFiles[j];
