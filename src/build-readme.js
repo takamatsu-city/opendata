@@ -21,7 +21,9 @@ class BuildReadme {
       const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`;
       const mapUrl = `${opendataViewerUrl}?data=${csvFileUrl}`;
 
-      readme += `| ${category.name} | [CSV](${csvFileUrl}) |[GeoJSON](${jsonFileUrl}) | [編集](${mapUrl}) | ${category.description} |\n`;
+      const filename = path.basename(category.filename, '.xlsx');
+
+      readme += `| ${category.name}(${filename}) | [CSV](${csvFileUrl}) |[GeoJSON](${jsonFileUrl}) | [編集](${mapUrl}) | ${category.description} |\n`;
     }
 
     readme += "\n以下のデータは位置情報を含まないデータです。\n\n";
