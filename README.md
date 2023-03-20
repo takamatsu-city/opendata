@@ -10,6 +10,7 @@
 
 | データ名 | CSV | GeoJSON | 地図で編集 | 説明 |
 | --- | --- | --- | --- | --- |
+| 環境施設(0001) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/environmental_facilities/0001.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/environmental_facilities/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/environmental_facilities/0001.csv) |  |
 | AED設置場所(0002) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/aed_location/0002.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/aed_location/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/aed_location/0002.csv) | AED（自動体外式除細動器）の設置場所情報 |
 | 市民活動・男女共同参画施設(0003) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/citizen_activity_facility/0003.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/citizen_activity_facility/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/citizen_activity_facility/0003.csv) |  |
 | コミュニティセンター(0004) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/community_center/0004.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/community_center/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/community_center/0004.csv) |  |
