@@ -2,9 +2,9 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   workflow_dispatch:
 
@@ -35,6 +35,7 @@ jobs:
       - run: npm run build-location-data
       - run: npm run build-standard-data
       - run: npm run build-api
+      - run: npm run build-data-updates
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -42,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: 'build'
+          path: "build"
 
       - name: Deploy to GitHub Pages
         id: deployment

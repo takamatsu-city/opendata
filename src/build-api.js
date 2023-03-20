@@ -59,7 +59,6 @@ class BuildApi {
       )
     }
 
-    console.log(data);
     const dest = fs.createWriteStream(`build/index.json`);
     dest.write(JSON.stringify(data));
   }

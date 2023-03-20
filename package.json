@@ -9,6 +9,7 @@
     "build-standard-data": "node src/build-standard-data.js",
     "build-readme": "node src/build-readme.js",
     "build-api": "node src/build-api.js",
+    "build-data-updates": "node src/build-data-updates.js",
     "convert-location-data": "node src/convert-location-data.js",
     "convert-standard-data": "node src/convert-standard-data.js"
   },
