@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       const year = match[1];
       const month = match[2];
       const day = match[3];
-      html += `<dt>${year}/${month}/${day}</dt><dd><a href="https://raw.githubusercontent.com/takamatsu-city/opendata/main/${update.file}">${update.category}</a></dd>`;
+      html += `<dt>${year}/${month}/${day}</dt><dd><a href="https://github.com/takamatsu-city/opendata/tree/main/data/${update.file}">${update.category}</a></dd>`;
     }
     document.getElementById('data-updates').innerHTML = html; 
   })

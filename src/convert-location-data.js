@@ -33,7 +33,7 @@ const main = async () => {
     let headers = [];
 
     for await (const record of parser) {
-      if (record[0]  === '#property') {
+      if (record[0] === '#property') {
         headers = record;
       }
 
