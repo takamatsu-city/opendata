@@ -15,7 +15,12 @@ class BuildDataUpdates {
       const category = path.dirname(file).split('/')[1];
       const categoryName = categories.find(c => c.category === category).name;
 
-      return { file, category: categoryName, mtime: stats.mtime };
+      return { 
+        file,
+        category: category,
+        category_name: categoryName,
+        mtime: stats.mtime
+      };
     }).sort((a, b) => b.mtime - a.mtime);
 
     const dest = fs.createWriteStream(`build/data-updates.json`);
