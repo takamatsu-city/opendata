@@ -48,6 +48,11 @@ class BuildReadme {
       });
     }
 
+    readme += "\n\n| データ名 | PDF | 説明 |\n";
+    readme += "| --- | --- | --- |\n";
+    readme += "| 小中学校通学区域情報(学校から) | [by_school.pdf](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/school_area_information/by_school.pdf) | |\n";
+    readme += "| 小中学校通学区域情報(住所から) | [by_address.pdf](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/school_area_information/by_address.pdf) | |\n";
+
     fs.writeFileSync("README.md" , readme);
   }
 }

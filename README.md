@@ -189,3 +189,9 @@
 | 介護保険利用料・被保険者数・要介護者数(0095) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/number_of_primary_insured/0095.csv) | [JSON](https://opendata.takamatsu-fact.com/number_of_primary_insured/0095.json) |  |
 | 国民健康保険被保険者数(0096) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/number_of_national_health_insurers/0096.csv) | [JSON](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/0096.json) |  |
 | オープンデータ一覧(0099) | [CSV](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/open_data_list/0099.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/0099.json) |  |
+
+
+| データ名 | PDF | 説明 |
+| --- | --- | --- |
+| 小中学校通学区域情報(学校から) | [by_school.pdf](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/school_area_information/by_school.pdf) | |
+| 小中学校通学区域情報(住所から) | [by_address.pdf](https://raw.githubusercontent.com/takamatsu-city/opendata/main/data/school_area_information/by_address.pdf) | |
