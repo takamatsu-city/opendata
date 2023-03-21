@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     let = html = '';
     for (let i = 0; i < 3; i++) {
       const update = result[i];
-      const match = update.mtime.match(/^(\d{4})-(\d{2})-(\d{2})/);
+      const match = update.date.match(/^(\d{4})-(\d{2})-(\d{2})/);
       const year = match[1];
       const month = match[2];
       const day = match[3];

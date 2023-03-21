@@ -6,23 +6,25 @@ const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 
+const execSync = require('child_process').execSync;
+
 class BuildDataUpdates {
   run() {
-    const data = [];
+    const cmd = "git ls-files data | xargs -n1 -I{} git log --reverse -1 --format='%cd {}' --date=iso-local {} | sort";
+    const result = execSync(cmd).toString();
+    const updates = result.split("\n").map(line => {
+      if (line) {
+        const category = path.basename(path.dirname(line.split(" ")[3]));
+        return {
+          date: line.split(" ")[0],
+          file: line.split(" ")[3],
+          category: category,
+          category_name: categories.find(c => c.category === category).name
+        }
+      }
+    });
 
-    const updates = glob.sync('data/**/*.csv').map(file => {
-      const stats = fs.statSync(file);
-      const category = path.dirname(file).split('/')[1];
-      const categoryName = categories.find(c => c.category === category).name;
-
-      return { 
-        file,
-        category: category,
-        category_name: categoryName,
-        mtime: stats.mtime
-      };
-    }).sort((a, b) => b.mtime - a.mtime);
-
+    updates.reverse();
     const dest = fs.createWriteStream(`build/data-updates.json`);
     dest.write(JSON.stringify(updates));
   }
