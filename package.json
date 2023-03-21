@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/takamatsu-city/opendata#readme",
   "dependencies": {
+    "child_process": "^1.0.2",
     "csv-parse": "^5.3.5",
     "csv-stringify": "^6.3.0",
     "csv2geojson": "^5.1.2",
