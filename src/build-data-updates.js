@@ -1,6 +1,7 @@
 const locationDataCategories = require('./location-data-categories.json');
 const standardDataCategories = require('./standard-data-categories.json');
-const categories = [...locationDataCategories, ...standardDataCategories];
+const pdfDataCategories = require('./pdf-data-categories.json');
+const categories = [...locationDataCategories, ...standardDataCategories, ...pdfDataCategories];
 
 const fs = require('fs');
 const glob = require('glob');
@@ -12,7 +13,7 @@ class BuildDataUpdates {
   run() {
     const cmd = "git ls-files data | xargs -n1 -I{} git log --reverse -1 --format='%cd {}' --date=iso-local {} | sort";
     const result = execSync(cmd).toString();
-    const updates = result.split("\n").map(line => {
+    let updates = result.split("\n").map(line => {
       if (line) {
         const category = path.basename(path.dirname(line.split(" ")[3]));
         return {
@@ -24,6 +25,8 @@ class BuildDataUpdates {
       }
     });
 
+    // null を配列から除去
+    updates = updates.filter(update => update);
     updates.reverse();
     const dest = fs.createWriteStream(`build/data-updates.json`);
     dest.write(JSON.stringify(updates));
