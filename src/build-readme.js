@@ -17,14 +17,16 @@ class BuildReadme {
       const category = locationDataCategories[i];
 
       const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
+      
+      const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
+      const csvFolderUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
 
-      const csvFileUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
       const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`;
       const mapUrl = `${opendataViewerUrl}?data=${csvFileUrl}`;
 
       const filename = path.basename(category.filename, '.xlsx');
 
-      readme += `| ${category.name}(${filename}) | [CSV](${csvFileUrl}) |[GeoJSON](${jsonFileUrl}) | [編集](${mapUrl}) | ${category.description} |\n`;
+      readme += `| ${category.name}(${filename}) | [CSV](${csvFolderUrl}) |[GeoJSON](${jsonFileUrl}) | [編集](${mapUrl}) | ${category.description} |\n`;
     }
 
     readme += "\n以下のデータは位置情報を含まないデータです。\n\n";
