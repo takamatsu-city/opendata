@@ -17,7 +17,8 @@ class BuildReadme {
       const category = locationDataCategories[i];
 
       const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
-      const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
+
+      const csvFileUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
       const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`;
       const mapUrl = `${opendataViewerUrl}?data=${csvFileUrl}`;
 
