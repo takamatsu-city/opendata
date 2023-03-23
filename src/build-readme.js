@@ -30,25 +30,30 @@ class BuildReadme {
     }
 
     readme += "\n以下のデータは位置情報を含まないデータです。\n\n";
-    readme += "| データ名 | CSV | GeoJSON | 説明 |\n";
+    readme += "| データ名 | CSV | JSON | 説明 |\n";
     readme += "| --- | --- | --- | --- |\n";
 
     for (let i = 0; i < standardDataCategories.length; i++) {
       const category = standardDataCategories[i];
-
-      const csvFilesPattern = `data/${category.category}/${category.filename}*.csv`;
-
-      // 最新順にソート
-      const csvFiles = glob.sync(csvFilesPattern).reverse();
-
-      csvFiles.map(file => {
-        const filename = path.basename(file, '.csv');
-        const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
-        const csvFile = `data/${category.category}/${filename}.csv`
-        const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
-
-        readme += `| ${category.name}(${filename}) | [CSV](${csvFileUrl}) | [JSON](${jsonFileUrl}) | ${category.description} |\n`;
-      });
+      const csvFolderUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
+      const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.json`;
+      if (category.category === "city_planning_basic_survey_information") {
+        const csvFiles = glob.sync(`data/${category.category}/${category.filename}*.csv`);
+        csvFiles.map(file => {
+          const filename = path.basename(file, '.csv');
+          const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
+          const subCategory = filename.split('_')[1];
+          if (file === csvFiles[0]) {
+            readme += `| ${category.name} | [CSV](${csvFolderUrl}) | [JSON(${subCategory})](${jsonFileUrl}) | ${category.description} |\n`;
+          } else {
+            readme += `||| [JSON(${subCategory})](${jsonFileUrl}) | ${category.description} |\n`;
+          } 
+        });
+      } else if (category.historical) {
+        readme += `| ${category.name} | [CSV(過去データ含む)](${csvFolderUrl}) | [JSON(最新)](${jsonFileUrl}) | ${category.description} |\n`;
+      } else {
+        readme += `| ${category.name} | [CSV](${csvFolderUrl}) | [JSON](${jsonFileUrl}) | ${category.description} |\n`;  
+      }
     }
 
     readme += "\n\n| データ名 | PDF | 説明 |\n";

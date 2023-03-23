@@ -18,7 +18,9 @@ for (let i = 0; i < categories.length; i++) {
       if (!fs.existsSync(categoryPath)) {
         fs.mkdirSync(categoryPath, { recursive: true });
       }
-      const dest = fs.createWriteStream(`${categoryPath}/${filename}.json`);
+
+      const filepath = `${categoryPath}/${files.length === 1 ? 'data' : filename}.json`;
+      const dest = fs.createWriteStream(filepath);
 
       const parser = fs
         .createReadStream(file)
@@ -29,6 +31,9 @@ for (let i = 0; i < categories.length; i++) {
         data.push(record);
       }
       dest.write(JSON.stringify(data));
+      if (categories[i].historical && file === files[files.length - 1]) {
+        fs.copyFileSync(filepath, path.dirname(filepath) + '/data.json');
+      }
     });
   });
 }
