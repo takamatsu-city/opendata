@@ -32,6 +32,8 @@ jobs:
         with:
           fetch-depth: 0
       - run: npm install
+      # gitに日本語ファイル名に対応させる。
+      - run: git config --global core.quotepath false
       - run: npm run build-location-data
       - run: npm run build-standard-data
       - run: npm run build-api
