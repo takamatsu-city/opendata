@@ -50,7 +50,7 @@ class BuildReadme {
           } 
         });
       } else if (category.historical) {
-        readme += `| ${category.name} | [CSV(過去データ含む)](${csvFolderUrl}) | [JSON(最新)](${jsonFileUrl}) | ${category.description} |\n`;
+        readme += `| ${category.name} | [CSV(過去データ含む)](${csvFolderUrl}) | [JSON(最新データ)](${jsonFileUrl}) | ${category.description} |\n`;
       } else {
         readme += `| ${category.name} | [CSV](${csvFolderUrl}) | [JSON](${jsonFileUrl}) | ${category.description} |\n`;  
       }

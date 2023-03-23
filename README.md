@@ -91,12 +91,12 @@
 
 | データ名 | CSV | JSON | 説明 |
 | --- | --- | --- | --- |
-| 地域・年齢別人口 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/population) | [JSON(最新)](https://opendata.takamatsu-fact.com/population/data.json) | 高松市内の町別、性別別、年齢別の人口情報 |
-| 将来推計人口データ | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/future_population_data) | [JSON(最新)](https://opendata.takamatsu-fact.com/future_population_data/data.json) |  |
+| 地域・年齢別人口 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/population) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/population/data.json) | 高松市内の町別、性別別、年齢別の人口情報 |
+| 将来推計人口データ | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/future_population_data) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/future_population_data/data.json) |  |
 | ごみ分別一覧 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/garbage_separation_list) | [JSON](https://opendata.takamatsu-fact.com/garbage_separation_list/data.json) |  |
 | イベント一覧 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/event_list) | [JSON](https://opendata.takamatsu-fact.com/event_list/data.json) |  |
-| 高松市組織一覧 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/takamatsu_city_organization_list) | [JSON(最新)](https://opendata.takamatsu-fact.com/takamatsu_city_organization_list/data.json) |  |
-| 学校給食献立情報 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/menu_information) | [JSON(最新)](https://opendata.takamatsu-fact.com/menu_information/data.json) | 高松市内の学校の給食情報を毎月更新 |
+| 高松市組織一覧 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/takamatsu_city_organization_list) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/takamatsu_city_organization_list/data.json) |  |
+| 学校給食献立情報 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/menu_information) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/menu_information/data.json) | 高松市内の学校の給食情報を毎月更新 |
 | 都市計画基礎調査情報 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/city_planning_basic_survey_information) | [JSON(延床面積)](https://opendata.takamatsu-fact.com/city_planning_basic_survey_information/0085_延床面積.json) |  |
 ||| [JSON(建物用途)](https://opendata.takamatsu-fact.com/city_planning_basic_survey_information/0085_建物用途.json) |  |
 ||| [JSON(建築年)](https://opendata.takamatsu-fact.com/city_planning_basic_survey_information/0085_建築年.json) |  |
@@ -106,8 +106,8 @@
 ||| [JSON(階数)](https://opendata.takamatsu-fact.com/city_planning_basic_survey_information/0085_階数.json) |  |
 | スマートシティたかまつ推進協議会会員企業一覧 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/list_of_member_companies) | [JSON](https://opendata.takamatsu-fact.com/list_of_member_companies/data.json) |  |
 | ごみ収集日 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/garbage_collection_date) | [JSON](https://opendata.takamatsu-fact.com/garbage_collection_date/data.json) |  |
-| 出生者数・死亡者数 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_births_and_deaths) | [JSON(最新)](https://opendata.takamatsu-fact.com/number_of_births_and_deaths/data.json) |  |
-| 転入・転出者数 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_people_moving_in_and_out) | [JSON(最新)](https://opendata.takamatsu-fact.com/number_of_people_moving_in_and_out/data.json) |  |
+| 出生者数・死亡者数 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_births_and_deaths) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/number_of_births_and_deaths/data.json) |  |
+| 転入・転出者数 | [CSV(過去データ含む)](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_people_moving_in_and_out) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/number_of_people_moving_in_and_out/data.json) |  |
 | 公立放課後児童クラブ一覧 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/children_club_list) | [JSON](https://opendata.takamatsu-fact.com/children_club_list/data.json) |  |
 | 介護保険利用料・被保険者数・要介護者数 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_primary_insured) | [JSON](https://opendata.takamatsu-fact.com/number_of_primary_insured/data.json) |  |
 | 国民健康保険被保険者数 | [CSV](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_national_health_insurers) | [JSON](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.json) |  |
