@@ -978,3 +978,79 @@ a {
     font-size: 16px;
   }
 }
+
+.footer-nav {
+  background: #003c66;
+  padding: 10px 0;
+}
+
+.footer-nav__container {
+  max-width: 1016px;
+  margin: 0 auto;
+}
+
+.footer-nav-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-list li {
+  position: relative;
+  padding-left: 8px;
+}
+
+.footer-nav-list li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-top: solid 1px #82cafe;
+  border-right: solid 1px #82cafe;
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.footer-nav-list li a {
+  color: #82cafe;
+  padding: 10px 20px;
+  display: block;
+  font-size: 13px;
+}
+
+.footer-nav-list li a:hover {
+  color: #FAC744;
+}
+
+@use "sass:math";
+.page__container {
+  max-width: 1016px;
+  margin: 0 auto;
+  padding: 0px 16px 60px;
+}
+
+@media (min-width: 768px) {
+  .page__container {
+    padding: 0px 16px 60px;
+  }
+}
+
+.page__section {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .page__section {
+    margin-bottom: 40px;
+  }
+}
