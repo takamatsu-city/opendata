@@ -1,5 +1,7 @@
 # 高松市オープンデータ
 
+[サイト(opendata.takamatsu-fact.com/)について（利用規約）](https://opendata.takamatsu-fact.com/about/)
+
 高松市では、以下のデータをオープンデータとして提供しています。
 
 表内の **CSV** や **GeoJSON** をクリックすると、最新データが得られます。
