@@ -1,13 +1,18 @@
 .l-header {
   display: flex;
   align-items: center;
+  height: 52px;
+  @include tablet {
+    height: auto;
+  }
   &__logo {
-    width: min(calc(324 / 650 * 100vw), 324px);
+    width: unquote('min(38vw, 240px)');
+    margin-left: 8px;  
   }
   &__title {
     color: $BLUE;
-    margin: 0 0 0 min(calc(20 / 650 * 100vw), 20px);
-    font-size: min(4.1vw, 28px);
+    margin: 0 0 0 unquote('min(3.0769230769vw, 20px)');
+    font-size: unquote('min(4.1vw, 18px)');
   }
 
 }
