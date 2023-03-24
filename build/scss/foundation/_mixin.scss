@@ -33,5 +33,5 @@
 //@include fs();
 @mixin fs($size, $base: 16) {
   font-size: $size + px;
-  font-size: math.div($size, $base) + rem;
+  // font-size: math.div($size, $base) + rem;
 }

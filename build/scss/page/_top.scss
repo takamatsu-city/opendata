@@ -14,18 +14,21 @@
   padding: 32px 16px;
   background-color: $BLUE;
   color: $WHITE;
+  background: url(../img/img_fv.jpg) center;
+  background-size: cover;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5),0 0 4px rgba(0, 0, 0, 0.5),0 0 4px rgba(0, 0, 0, 0.5);
   @include tablet {
-    padding: 48px 16px;
+    padding: 72px 16px;
     text-align: center;
   }
   &__heading {
     margin: 0;
-    @include fs(24);
+    @include fs(20);
     br {
       display: none;
     }
     @include tablet {
-      @include fs(32);
+      @include fs(30);
     }
     @include desktop {
       br {
@@ -37,8 +40,9 @@
     margin: 20px auto 0;
     max-width: 720px;
     text-align: left;
+    font-size: 13px;
     @include tablet {
-      @include fs(18);
+      @include fs(16);
     }
   }
 }
@@ -46,13 +50,14 @@
 .top-about {
   max-width: 992px;
   margin: 0 auto;
-  padding: 40px 0 40px;
+  padding: 20px 0 0px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   @include tablet {
-    padding: 60px 0 40px;
+    padding: 30px 0 0px;
     flex-direction: row;
+    @include fs(15);
   }
   &__item {
     padding: 16px;
@@ -67,17 +72,17 @@
     @include fs(18);
     border-bottom: 1px solid $BLUE;
     @include tablet {
-      @include fs(24);
+      @include fs(18);
     }
   }
 }
 
 .top-openData {
-  padding: 40px 0 72px;
+  padding: 20px 0 40px;
   background: #000;
   background: linear-gradient(180deg, rgba(223, 242, 255, 0) 0%, #DFF2FF 5.73%);
   @include tablet {
-    padding: 60px 0 100px;
+    padding: 20px 0 72px;
   }
   &__container {
     max-width: 1016px;
@@ -107,7 +112,7 @@
     padding: 16px;
     @include tablet {
       max-width: 496px;
-      padding: 32px;
+      padding: 0px 32px 12px;
     }
   }
   &__heading {
@@ -118,12 +123,12 @@
       font-weight: normal;
     }
     @include tablet {
-      @include fs(22);
+      @include fs(18);
     }
     @include desktop {
       @include fs(24);
       .small {
-        @include fs(20);
+        @include fs(16);
       }
     }
   }
@@ -141,7 +146,7 @@
     padding: 16px 16px 0;
     text-align: center;
     @include tablet {
-      padding: 60px 0 0;
+      padding: 24px 0 0;
     }
     @include desktop {
       margin: 0 auto;
@@ -149,24 +154,31 @@
   }
   &__codeTxt {
     @include fs(18);
+    line-height: 1.3;
     margin-bottom: 20px;
     font-weight: bold;
     br {
       display: none;
     }
     @include tablet {
-      @include fs(24);
+      @include fs(18);
       br {
         display: inline;
       }
-    }
+    }   
   }
 }
+@media (min-width: 992px) {
+  .top-openData__codeTxt {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+} 
 
 .top-info {
-  padding: 40px 16px;
+  padding: 40px 16px 0px;
   @include tablet {
-    padding: 80px 16px;
+    padding: 60px 16px 0px;
   }
   &__container {
     max-width: 1016px;
@@ -183,9 +195,10 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 12px;
     @include tablet {
       width: calc(50% - 30px);
+      gap: 30px;
     }
   }
   &__heading {
@@ -234,15 +247,15 @@
   color: $WHITE;
   @include tablet {
     margin-top: 60px;
-    padding: 92px 16px;
+    padding: 60px 16px;
   }
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
     @include tablet {
-      gap: 40px;
+      gap: 20px;
     }
   }
   &__heading {
@@ -256,10 +269,10 @@
     }
   }
   &__txt {
-    @include fs(16);
+    @include fs(14);
     margin-bottom: 0;
     @include tablet {
-      @include fs(22);
+      @include fs(18);
     }
     &.is-gold {
       color: $GOLD;
@@ -273,14 +286,14 @@
     @include fs(13);
     color: $BLUE;
     @include tablet {
-      @include fs(20);
+      @include fs(18);
     }
   }
   &__attention {
     @include fs(14);
     color: $GOLD;
     @include tablet {
-      @include fs(18);
+      @include fs(16);
     }
   }
 }
