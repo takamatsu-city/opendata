@@ -33,6 +33,9 @@ for (let i = 0; i < categories.length; i++) {
       dest.write(JSON.stringify(data));
       if (categories[i].historical && file === files[files.length - 1]) {
         fs.copyFileSync(filepath, categoryPath + '/data.json');
+        if (category === 'population') {
+          console.log(`copy ${filepath} to ${categoryPath}/data.json`);
+        }
         fs.copyFileSync(file, categoryPath + '/data.csv');
       } else if (files.length === 1) {
         fs.copyFileSync(file, categoryPath + '/data.csv');
