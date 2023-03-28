@@ -49,9 +49,9 @@ class BuildReadme {
           const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.csv`;          
           const subCategory = filename.split('_')[1];
           if (file === csvFiles[0]) {
-            readme += `| ${category.name}(${category.filename}) | [フォルダ](${csvFolderUrl}) | [CSV](${csvFileUrl}) | [JSON(${subCategory})](${jsonFileUrl}) |\n`;
+            readme += `| ${category.name}(${category.filename}) | [フォルダ](${csvFolderUrl}) | [CSV(${subCategory})](${csvFileUrl}) | [JSON(${subCategory})](${jsonFileUrl}) |\n`;
           } else {
-            readme += `||| [CSV](${csvFileUrl}) | [JSON(${subCategory})](${jsonFileUrl}) |\n`;
+            readme += `||| [CSV(${subCategory})](${csvFileUrl}) | [JSON(${subCategory})](${jsonFileUrl}) |\n`;
           } 
         });
       } else if (category.historical) {
