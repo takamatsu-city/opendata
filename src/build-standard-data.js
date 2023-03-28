@@ -32,7 +32,12 @@ for (let i = 0; i < categories.length; i++) {
       }
       dest.write(JSON.stringify(data));
       if (categories[i].historical && file === files[files.length - 1]) {
-        fs.copyFileSync(filepath, path.dirname(filepath) + '/data.json');
+        fs.copyFileSync(filepath, categoryPath + '/data.json');
+        fs.copyFileSync(file, categoryPath + '/data.csv');
+      } else if (files.length === 1) {
+        fs.copyFileSync(file, categoryPath + '/data.csv');
+      } else if (category === 'city_planning_basic_survey_information') {
+        fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
       }
     });
   });

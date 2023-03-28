@@ -1,5 +1,6 @@
 node_modules
 build/**/*.geojson
 build/**/*.json
+build/**/*.csv
 .DS_Store
 data_old
