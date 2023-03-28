@@ -27,6 +27,10 @@ for (let i = 0; i < categories.length; i++) {
         if (err) throw err;
         dest.write(JSON.stringify(data));
       });
+
+      if (files.length === 1) {
+        fs.copyFileSync(file, `${categoryPath}/data.csv`);
+      }
     });
   });
 }
