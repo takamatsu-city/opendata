@@ -113,6 +113,7 @@
 | 公立放課後児童クラブ一覧(0093) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/children_club_list) | [CSV](https://opendata.takamatsu-fact.com/children_club_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/children_club_list/data.json) |
 | 介護保険利用料・被保険者数・要介護者数(0095) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_primary_insured) | [CSV](https://opendata.takamatsu-fact.com/number_of_primary_insured/data.csv) | [JSON](https://opendata.takamatsu-fact.com/number_of_primary_insured/data.json) |
 | 国民健康保険被保険者数(0096) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_national_health_insurers) | [CSV](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.csv) | [JSON](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.json) |
+| 令和2年度市税決算状況(0097) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/city_tax_settlement_status_r2) | [CSV](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.csv) | [JSON](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.json) |
 | オープンデータ一覧(0099) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/open_data_list) | [CSV](https://opendata.takamatsu-fact.com/open_data_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/data.json) |
 
 

@@ -13,5 +13,6 @@
   { "category": "children_club_list", "name": "公立放課後児童クラブ一覧", "filename": "0093", "description": "", "historical": false },
   { "category": "number_of_primary_insured", "name": "介護保険利用料・被保険者数・要介護者数", "filename": "0095", "description": "", "historical": false },
   { "category": "number_of_national_health_insurers", "name": "国民健康保険被保険者数", "filename": "0096", "description": "", "historical": false },
+  { "category": "city_tax_settlement_status_r2", "name": "令和2年度市税決算状況", "filename": "0097", "description": "", "historical": false },
   { "category": "open_data_list", "name": "オープンデータ一覧", "filename": "0099", "description": "", "historical": false }
 ]
