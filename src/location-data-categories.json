@@ -73,6 +73,8 @@
   { "category": "road_station_list", "name": "道の駅一覧", "filename": "0077.xlsx", "description": "" },
   { "category": "company_led_childcare_facilities_list", "name": "企業主導型保育施設一覧", "filename": "0078.xlsx", "description": "" },
   { "category": "unapproved_childcare_facilities", "name": "認可外保育施設一覧", "filename": "0079.xlsx", "description": "" },
+  { "category": "reservoir_list", "name": "ため池一覧", "filename": "0082.xlsx", "description": "" },
   { "category": "recycling_box_installation_location", "name": "使用済小型家電リサイクルBOX設置場所一覧", "filename": "0086.xlsx", "description": "" },
+  { "category": "children_club", "name": "民間放課後児童クラブ", "filename": "0094.xlsx", "description": "" },
   { "category": "list_of_designated_collection_bag_dealers", "name": "指定収集袋取扱店一覧", "filename": "0098.xlsx", "description": "" }
 ]
