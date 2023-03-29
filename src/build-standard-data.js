@@ -11,8 +11,9 @@ for (let i = 0; i < categories.length; i++) {
   const category = categories[i].category;
   const csvFiles = `data/${category}/*.csv`;
 
-  glob(csvFiles, (err, files) => {
-    files.forEach(async file => {
+  glob(csvFiles, async (err, files) => {
+    for(let j = 0; j < files.length; j++) {
+      const file = files[j];
       const filename = path.basename(file, '.csv');
       const categoryPath = `${outDir}/${category}`;
       if (!fs.existsSync(categoryPath)) {
@@ -32,14 +33,14 @@ for (let i = 0; i < categories.length; i++) {
       }
       dest.write(JSON.stringify(data));
       if (categories[i].historical && file === files[files.length - 1]) {
+        fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
         fs.copyFileSync(filepath, categoryPath + '/data.json');
         fs.copyFileSync(file, categoryPath + '/data.csv');
-        fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
       } else if (files.length === 1) {
         fs.copyFileSync(file, categoryPath + '/data.csv');
       } else {
         fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
       }
-    });
+    };
   });
 }
