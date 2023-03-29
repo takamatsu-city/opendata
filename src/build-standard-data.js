@@ -33,13 +33,11 @@ for (let i = 0; i < categories.length; i++) {
       dest.write(JSON.stringify(data));
       if (categories[i].historical && file === files[files.length - 1]) {
         fs.copyFileSync(filepath, categoryPath + '/data.json');
-        if (category === 'population') {
-          console.log(`copy ${filepath} to ${categoryPath}/data.json`);
-        }
         fs.copyFileSync(file, categoryPath + '/data.csv');
+        fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
       } else if (files.length === 1) {
         fs.copyFileSync(file, categoryPath + '/data.csv');
-      } else if (category === 'city_planning_basic_survey_information') {
+      } else {
         fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
       }
     });
