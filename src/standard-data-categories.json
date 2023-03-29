@@ -1,6 +1,6 @@
 [
   { "category": "population", "name": "地域・年齢別人口", "filename": "0066", "description": "高松市内の町別、性別別、年齢別の人口情報", "historical": true },
-  { "category": "future_population_data", "name": "将来推計人口データ", "filename": "0068", "description": "", "historical": true },
+  { "category": "future_population_data", "name": "将来推計人口データ", "filename": "0068", "description": "", "historical": false },
   { "category": "garbage_separation_list", "name": "ごみ分別一覧", "filename": "0074", "description": "", "historical": false },
   { "category": "event_list", "name": "イベント一覧", "filename": "0081", "description": "", "historical": false },
   { "category": "takamatsu_city_organization_list", "name": "高松市組織一覧", "filename": "0083", "description": "", "historical": true },

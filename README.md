@@ -94,7 +94,7 @@
 | データ名 | フォルダ | CSV | JSON |
 | --- | --- | --- | --- |
 | 地域・年齢別人口(0066) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/population) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/population/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/population/data.json) |
-| 将来推計人口データ(0068) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/future_population_data) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/future_population_data/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/future_population_data/data.json) |
+| 将来推計人口データ(0068) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/future_population_data) | [CSV](https://opendata.takamatsu-fact.com/future_population_data/data.csv) | [JSON](https://opendata.takamatsu-fact.com/future_population_data/data.json) |
 | ごみ分別一覧(0074) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/garbage_separation_list) | [CSV](https://opendata.takamatsu-fact.com/garbage_separation_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/garbage_separation_list/data.json) |
 | イベント一覧(0081) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/event_list) | [CSV](https://opendata.takamatsu-fact.com/event_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/event_list/data.json) |
 | 高松市組織一覧(0083) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/takamatsu_city_organization_list) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/takamatsu_city_organization_list/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/takamatsu_city_organization_list/data.json) |
