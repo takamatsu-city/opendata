@@ -13,7 +13,7 @@ class BuildApi {
       const category = locationDataCategories[i];
 
       const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
-      const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
+      const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.csv`;
       const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`;
 
       const id = path.basename(category.filename, '.xlsx');
@@ -42,18 +42,20 @@ class BuildApi {
       csvFiles.map(file => {
         const filename = path.basename(file, '.csv');
         const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
-        const csvFile = `data/${category.category}/${filename}.csv`
-        const csvFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
+        const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.csv`;
         csvs.push(csvFileUrl)
         jsons.push(jsonFileUrl);
       });
+
+      const defaultJsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.json`;
+      const defaultCsvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.csv`;
 
       data.push(
         {
           "id": category.filename,
           "name": category.name,
-          "csv": csvs.length > 1 ? csvs : csvs[0],
-          "json": jsons.length > 1 ? jsons : jsons[0],
+          "csv": csvs.length > 1 ? [defaultCsvFileUrl].concat(csvs) : defaultCsvFileUrl,
+          "json": jsons.length > 1 ? [defaultJsonFileUrl].concat(jsons) : defaultJsonFileUrl,
           "location": false
         }
       )
