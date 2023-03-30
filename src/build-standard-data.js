@@ -5,8 +5,6 @@ const path = require('path');
 
 const categories = require('./standard-data-categories.json');
 
-const outDir = 'build';
-
 for (let i = 0; i < categories.length; i++) {
   const category = categories[i].category;
   const csvFiles = `data/${category}/*.csv`;
@@ -15,7 +13,7 @@ for (let i = 0; i < categories.length; i++) {
     for(let j = 0; j < files.length; j++) {
       const file = files[j];
       const filename = path.basename(file, '.csv');
-      const categoryPath = `${outDir}/${category}`;
+      const categoryPath = `build/${category}`;
       if (!fs.existsSync(categoryPath)) {
         fs.mkdirSync(categoryPath, { recursive: true });
       }
@@ -33,12 +31,15 @@ for (let i = 0; i < categories.length; i++) {
       }
       dest.write(JSON.stringify(data));
       if (categories[i].historical && file === files[files.length - 1]) {
+        // csvファイルをbuildフォルダにコピー
         fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
+        // 最新json、csvファイルをそれぞれdata.json、data.csvにコピー
         fs.copyFileSync(filepath, categoryPath + '/data.json');
         fs.copyFileSync(file, categoryPath + '/data.csv');
       } else if (files.length === 1) {
         fs.copyFileSync(file, categoryPath + '/data.csv');
       } else {
+        // csvファイルをbuildフォルダにコピー
         fs.copyFileSync(file, `${categoryPath}/${path.basename(file)}`);
       }
     };

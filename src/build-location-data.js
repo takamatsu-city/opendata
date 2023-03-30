@@ -6,16 +6,15 @@ const csv2geojson = require('csv2geojson');
 
 const categories = require('./location-data-categories.json');
 
-const outDir = 'build';
-
 for (let i = 0; i < categories.length; i++) {
   const category = categories[i].category;
   const csvFiles = `data/${category}/*.csv`;
 
-  glob(csvFiles, (err, files) => {
-    files.forEach(async file => {
+  glob(csvFiles, async (err, files) => {
+    for(let j = 0; j < files.length; j++) {
+      const file = files[j];
       const category = path.basename(path.dirname(file));
-      const categoryPath = `${outDir}/${category}`;
+      const categoryPath = `build/${category}`;
       if (!fs.existsSync(categoryPath)) {
         fs.mkdirSync(categoryPath, { recursive: true });
       }
@@ -24,13 +23,16 @@ for (let i = 0; i < categories.length; i++) {
       const csvString = fs.readFileSync(file, 'utf8');
 
       csv2geojson.csv2geojson(csvString, function(err, data) {
-        if (err) throw err;
+        if (err) {
+          console.error(err);
+          throw err;
+        };
         dest.write(JSON.stringify(data));
       });
 
       if (files.length === 1) {
         fs.copyFileSync(file, `${categoryPath}/data.csv`);
       }
-    });
+    };
   });
 }
