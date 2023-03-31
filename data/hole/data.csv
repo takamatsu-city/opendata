@@ -1,0 +1,3 @@
+#property,latitude,longitude,name,address,telephoneNumber,referenceObject,note,availableDate,startTime,endTime,availableDateNote
+1,34.35274583,134.04698889,高松市文化芸術ホール  （サンポートホール高松）,高松市サンポート2-1,087-825-5000,http://www.sunport-hall.jp/,改修工事のため2022年4月から2024年3月まで市民ギャラリー及びコミュニケーションプラザを除き休館します。,月火水木金土日,09:00,22:00,ﾘﾊｰｻﾙ室及び練習室は23時まで。12/29～1/3は終日利用不可
+2,34.29603167,133.95952333,高松国分寺ホール,高松市国分寺町新名430,087-875-0162,http://kokubunji-hall.jp/,,火水木金土日,09:00,22:00,12/29～1/3は終日利用不可

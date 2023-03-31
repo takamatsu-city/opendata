@@ -20,12 +20,11 @@ class BuildReadme {
 
       const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
       
-      const csvRawFileUrl = `https://raw.githubusercontent.com/takamatsu-city/opendata/main/${csvFile}`;
       const csvFolderUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
 
       const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.csv`;
       const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.geojson`;
-      const mapUrl = `${opendataViewerUrl}?data=${csvRawFileUrl}`;
+      const mapUrl = `${opendataViewerUrl}?data=${csvFileUrl}`;
 
       const filename = path.basename(category.filename, '.xlsx');
 

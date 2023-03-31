@@ -62,9 +62,10 @@ const main = async () => {
       data.push(object);
     }
     const csvString = stringifySync.stringify(data, {
-      header: true
+      header: true,
+      record_delimiter: 'windows'
     });
-    fs.writeFileSync(`${outDir}/${category}/${filename}.csv`, csvString);
+    fs.writeFileSync(`${categoryPath}/data.csv`, csvString);
   }
 }
 

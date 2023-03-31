@@ -8,7 +8,7 @@ const categories = require('./location-data-categories.json');
 
 for (let i = 0; i < categories.length; i++) {
   const category = categories[i].category;
-  const csvFiles = `data/${category}/*.csv`;
+  const csvFiles = `data/${category}/data.csv`;
 
   glob(csvFiles, async (err, files) => {
     for(let j = 0; j < files.length; j++) {
