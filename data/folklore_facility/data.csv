@@ -1,0 +1,7 @@
+#property,latitude,longitude,name,address,telephoneNumber,referenceObject,note,availableDate,startTime,endTime,availableDateNote
+1,34.34397,134.03447778,菊池寛記念館,高松市昭和町一丁目2-20,087-861-4502,https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/kikuchikan/index.html,,火水木金土日,09:00,17:00,入館は16：30まで。月曜日（祝日の場合は翌平日）、年末年始（12/29～1/3）利用不可
+2,34.34397,134.03447778,高松市歴史資料館,高松市昭和町一丁目2-20,087-861-4520,http://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/index.html,,火水木金土日,09:00,17:00,入館は16：30まで。月曜日（祝日の場合は翌平日）、年末年始（12/29～1/3）利用不可
+3,34.35271028,134.13403806,高松市石の民俗資料館,高松市牟礼町牟礼1810,087-845-8484,http://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/ishi.html,,火水木金土日,09:00,17:00,入館は16：30まで。月曜日（祝日の場合は翌平日）、年末年始（12/29～1/3）利用不可
+4,34.23924278,134.02162667,高松市香南歴史民俗郷土館,高松市香南町由佐253-1,087-879-0717,http://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/konan.html,,火水木金土日,09:00,17:00,入館は16：30まで。月曜日（祝日の場合は翌平日）、年末年始（12/29～1/3）利用不可
+5,34.30283944,133.94675889,高松市讃岐国分寺跡資料館,高松市国分寺町国分2177-1,087-874-8840,http://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/sanuki.html,,火水木金土日,09:00,16:30,入館は16：30まで。月曜日（祝日の場合は翌平日）、年末年始（12/29～1/3）利用不可
+6,34.3435211,134.0458211,高松市埋蔵文化財センター,高松市番町一丁目5-1,087-823-2714,http://www.takamatsu-webmuseum.jp/maizou/,,月火水木金,09:00,17:00,祝日、年末年始（12/29～1/3）利用不可

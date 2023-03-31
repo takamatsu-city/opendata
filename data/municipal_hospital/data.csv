@@ -1,0 +1,4 @@
+#property,latitude,longitude,name,address,telephoneNumber,referenceObject,note,availableDate,startTime,endTime,availableDateNote
+1,34.282668,134.040965,高松市立みんなの病院,高松市仏生山町甲847-1,087-813-7171,http://www.takamatsu-municipal-hospital.jp/,,月火水木金,08:30,17:00,祝日及び年末年始(12/29～1/3)は利用不可
+2,34.171554,134.08063,高松市民病院　塩江分院,高松市塩江町安原上東99-1,087-893-0031,http://tmh-shionoe.jpn.org/,,月火水木金,08:40,17:00,祝日及び年末年始(12/29～1/3)は利用不可
+3,34.339005,134.059464,高松市夜間急病診療所,高松市松島町一丁目16-20,087-839-2299,http://www.city.takamatsu.kagawa.jp/kurashi/kyukyu/yakan/shiryojo.html,,月火水木金土日,19:30,23:30,内科・小児科は毎日、耳鼻咽喉科は木曜日のみ、眼科は土曜日のみ
