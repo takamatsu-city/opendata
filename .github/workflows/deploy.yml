@@ -37,6 +37,10 @@ jobs:
       - run: npm run build-api
       - run: npm run build-data-updates
 
+      - name: Set current datetime as env variable
+        env:
+          TZ: 'Asia/Tokyo'
+        run: echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -44,7 +48,7 @@ jobs:
           aws-region: ap-northeast-1
       - name: Backup data folder to S3 bucket
         run: |
-          aws s3 sync data s3://takamatsu-city-opendata-backup-ap-northeast-1
+          aws s3 sync data s3://takamatsu-city-opendata-backup-ap-northeast-1/${{ env.CURRENT_DATETIME }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
