@@ -46,6 +46,7 @@ jobs:
     permissions:
       contents: read
       pages: write
+      id-token: write
 
     # environment is not compatible with AWS credentials
     environment:
