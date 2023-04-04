@@ -71,8 +71,6 @@ jobs:
 
   backup:
     # if: github.ref == 'refs/heads/main'
-    needs:
-      - build
 
     runs-on: ubuntu-latest
     # Allow write on id-token so we can use it to authenticate to AWS
@@ -81,11 +79,8 @@ jobs:
       id-token: write
 
     steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: build
-          
+      - uses: actions/checkout@v3
+
       - name: Set current datetime as env variable
         env:
           TZ: 'Asia/Tokyo'
