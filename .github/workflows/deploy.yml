@@ -1,32 +1,20 @@
-name: Deploy
+name: Build & Deploy
 
 on:
   push:
-    branches: [main]
-
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - '*'
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - run: npm install
@@ -37,18 +25,41 @@ jobs:
       - run: npm run build-api
       - run: npm run build-data-updates
 
-      - name: Set current datetime as env variable
-        env:
-          TZ: 'Asia/Tokyo'
-        run: echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
+      - uses: actions/upload-artifact@v3
+        if: github.ref == 'refs/heads/main'
         with:
-          role-to-assume: arn:aws:iam::584344484091:role/takamatsu_github_s3_backup
-          aws-region: ap-northeast-1
-      - name: Backup data folder to S3 bucket
-        run: |
-          aws s3 sync data s3://takamatsu-city-opendata-backup-ap-northeast-1/${{ env.CURRENT_DATETIME }}
+          name: build
+          path: build
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+
+    # Allow one concurrent deployment
+    concurrency:
+      group: "pages"
+      cancel-in-progress: true
+
+    needs:
+      - build
+
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    # environment is not compatible with AWS credentials
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -61,3 +72,30 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  backup:
+    if: github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+    # Allow write on id-token so we can use it to authenticate to AWS
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set current datetime as env variable
+        env:
+          TZ: 'Asia/Tokyo'
+        run: echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::584344484091:role/takamatsu_github_s3_backup
+          aws-region: ap-northeast-1
+
+      - name: Backup data folder to S3 bucket
+        run: |
+          aws s3 sync data s3://takamatsu-city-opendata-backup-ap-northeast-1/${{ env.CURRENT_DATETIME }}
