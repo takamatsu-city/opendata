@@ -4,8 +4,6 @@ on:
   push:
     branches: 
       - main
-      - backup-security
-
   workflow_dispatch:
 
 # Allow one concurrent deployment
@@ -70,7 +68,7 @@ jobs:
         uses: actions/deploy-pages@v1
 
   backup:
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
 
     runs-on: ubuntu-latest
     # Allow write on id-token so we can use it to authenticate to AWS
@@ -89,7 +87,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::584344484091:role/takamatsu_github_s3_backup_test
+          role-to-assume: arn:aws:iam::584344484091:role/takamatsu_github_s3_backup
           aws-region: ap-northeast-1
 
       - name: Backup data folder to S3 bucket
