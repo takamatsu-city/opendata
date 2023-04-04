@@ -4,12 +4,10 @@ on:
   push:
     branches: 
       - main
+  pull_request:
+    branches:
+      - '*'
   workflow_dispatch:
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -28,12 +26,19 @@ jobs:
       - run: npm run build-data-updates
 
       - uses: actions/upload-artifact@v3
+        if: github.ref == 'refs/heads/main'
         with:
           name: build
           path: build
 
   deploy:
     if: github.ref == 'refs/heads/main'
+
+    # Allow one concurrent deployment
+    concurrency:
+      group: "pages"
+      cancel-in-progress: true
+
     needs:
       - build
 
