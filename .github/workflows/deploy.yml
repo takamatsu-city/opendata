@@ -2,11 +2,11 @@ name: Build & Deploy
 
 on:
   push:
-    branches: 
+    branches:
       - main
   pull_request:
     branches:
-      - '*'
+      - "*"
   workflow_dispatch:
 
 jobs:
@@ -20,6 +20,10 @@ jobs:
       - run: npm install
       # gitに日本語ファイル名に対応させる。
       - run: git config --global core.quotepath false
+
+      - run: sudo apt-get install -y nkf
+      - run: find data -type f -exec nkf -w --overwrite {} \;
+
       - run: npm run build-location-data
       - run: npm run build-standard-data
       - run: npm run build-api
@@ -87,7 +91,7 @@ jobs:
 
       - name: Set current datetime as env variable
         env:
-          TZ: 'Asia/Tokyo'
+          TZ: "Asia/Tokyo"
         run: echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
 
       - name: Configure AWS credentials
