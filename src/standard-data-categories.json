@@ -16,5 +16,5 @@
   { "category": "city_tax_settlement_status_r2", "name": "令和2年度市税決算状況", "filename": "0097", "description": "", "historical": false },
   { "category": "open_data_list", "name": "オープンデータ一覧", "filename": "0099", "description": "", "historical": false },
   { "category": "new_beauty_salons", "name": "美容所新規開設一覧（202304）", "filename": "美容所新規開設一覧（202304）", "description": "", "historical": true },
-  { "category": "new_beauty_salons", "name": "旅館業新規開設一覧（202304）", "filename": "旅館業新規開設一覧（202304）", "description": "", "historical": true }
+  { "category": "new_hostels", "name": "旅館業新規開設一覧（202304）", "filename": "旅館業新規開設一覧（202304）", "description": "", "historical": true }
 ]
