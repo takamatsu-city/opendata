@@ -118,7 +118,7 @@
 | 令和2年度市税決算状況(0097) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/city_tax_settlement_status_r2) | [CSV](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.csv) | [JSON](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.json) |
 | オープンデータ一覧(0099) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/open_data_list) | [CSV](https://opendata.takamatsu-fact.com/open_data_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/data.json) |
 | 美容所新規開設一覧(0101) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_beauty_salons) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.json) |
-| 旅館業新規開設一覧(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
+| 旅館業新規開設一覧1(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
 
 
 | データ名 | PDF |
