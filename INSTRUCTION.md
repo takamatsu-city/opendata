@@ -37,7 +37,7 @@
 },
 ```
 
-## 時系列データの追加方法
+##### 時系列データの追加方法
 
 旅館業新規開設一覧（2023年04月）など、時系列データの場合は、`historical`を`true`にして下さい。
 - `filename` は READMEに使用されます。
@@ -52,3 +52,15 @@
   "historical": true
 }
 ```
+
+#### 編集方法
+
+- 鉛筆マークの 「Edit this file」 をクリックして下さい。
+
+<img width="1440" alt="スクリーンショット 2023-05-18 18 08 28" src="https://github.com/takamatsu-city/opendata/assets/8760841/cd9496ee-f0ea-4b0c-9270-4e58596afa8f">
+
+- 編集中のブランチ名かを確認し、「Commit Changes」をクリックして下さい。
+- 新規に作成したブランチ名だと、`<githubユーザー名>-patch-1` になっているハズです。
+
+<img width="1120" alt="スクリーンショット 2023-05-18 18 12 54" src="https://github.com/takamatsu-city/opendata/assets/8760841/f468a815-3dc4-4dec-af83-bc5064c51bf9">
+
