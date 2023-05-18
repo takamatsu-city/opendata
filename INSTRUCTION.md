@@ -41,8 +41,7 @@
 
 旅館業新規開設一覧（2023年04月）など、時系列データの場合は、`historical`を`true`にして下さい。
 - `filename` は READMEに使用されます。
-- ファイル名は、`{データ名}_{年月}.csv`にしても大丈夫です。（なぜ？）
-
+- 時系列のデータの場合は、ファイル名は、`{データ番号}_{YYMM}.csv`にして、`filename`は、`{データ番号}`にして下さい。
 
 ```
 {
@@ -52,22 +51,4 @@
   "description": "",
   "historical": true
 }
-```
-
-
-## READMEの更新
-
-以下で、READMEを更新できます。
-
-```
-$ npm run build-readme
-```
-
-完了したら、以下でコミットして下さい。
-
-```
-git checkout -b add-new-data
-git add .
-git commit -m"update Data"
-git push origin add-new-data
 ```
