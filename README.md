@@ -119,10 +119,10 @@
 | オープンデータ一覧(0099) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/open_data_list) | [CSV](https://opendata.takamatsu-fact.com/open_data_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/data.json) |
 | 美容所新規開設一覧(0101) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_beauty_salons) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.json) |
 | 旅館業新規開設一覧(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
-| クリーニング所新規開設一覧(0102)() | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_cleanings) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.json) |
-| 公衆浴場新規開設一覧(0104)() | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_public_baths) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_public_baths/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_public_baths/data.json) |
-| 常設興行場新規開設一覧(0105)() | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_always_entertainments) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_always_entertainments/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_always_entertainments/data.json) |
-| 仮説興行場新規開設一覧(0106)() | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_temp_entertainments) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_temp_entertainments/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_temp_entertainments/data.json) |
+| クリーニング所新規開設一覧(0102)|  |  |  |
+| 公衆浴場新規開設一覧(0104) |  |  |  |
+| 常設興行場新規開設一覧(0105) |  |  |  |
+| 仮説興行場新規開設一覧(0106) |  |  |  |
 
 
 | データ名 | PDF |
