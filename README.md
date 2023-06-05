@@ -119,7 +119,7 @@
 | オープンデータ一覧(0099) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/open_data_list) | [CSV](https://opendata.takamatsu-fact.com/open_data_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/data.json) |
 | 理容所新規開設一覧(0100) |  |  | |
 | 美容所新規開設一覧(0101) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_beauty_salons) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.json) |
-| クリーニング所新規開設一覧(0102)| | | |
+| クリーニング所新規開設一覧(0102)|  |  | |
 | 旅館業新規開設一覧(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
 | 公衆浴場新規開設一覧(0104) |  |  |  |
 | 常設興行場新規開設一覧(0105) |  |  |  |
