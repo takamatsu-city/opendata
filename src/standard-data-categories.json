@@ -21,5 +21,5 @@
   { "category": "new_hostels", "name": "旅館業新規開設一覧", "filename": "0103", "description": "", "historical": true },
   { "category": "new_public_baths", "name": "公衆浴場新規開設一覧(0104)", "filename": "", "description": "", "historical": true },
   { "category": "new_always_entertainments", "name": "常設興行場新規開設一覧(0105)", "filename": "", "description": "", "historical": true },
-  { "category": "new_temp_entertainments", "name": "仮説興行場新規開設一覧(0106)", "filename": "", "description": "", "historical": true }
+  { "category": "new_temp_entertainments", "name": "仮設興行場新規開設一覧(0106)", "filename": "", "description": "", "historical": true }
 ]

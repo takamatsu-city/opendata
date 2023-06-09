@@ -123,7 +123,7 @@
 | 旅館業新規開設一覧(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
 | 公衆浴場新規開設一覧(0104) |  |  |  |
 | 常設興行場新規開設一覧(0105) |  |  |  |
-| 仮説興行場新規開設一覧(0106) |  |  |  |
+| 仮設興行場新規開設一覧(0106) |  |  |  |
 
 
 | データ名 | PDF |
