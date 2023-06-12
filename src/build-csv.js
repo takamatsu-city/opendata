@@ -7,7 +7,6 @@ const readXlsxFile = require('read-excel-file/node');
 const excel2csv = async (excelPath) => {
   let rows = await readXlsxFile(excelPath);
 
-  // Remove first column
   rows = rows.filter(row => { // remove empty lines ― This is required because Papaparse does not elimitate the row with all null cells
     if (!Array.isArray(row)) {
       return false;
