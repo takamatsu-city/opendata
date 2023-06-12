@@ -24,8 +24,6 @@ jobs:
       - run: sudo apt-get install -y nkf
 
       - run: npm run build-csv
-      - run: find data -type f -exec nkf -w --overwrite {} \;
-
       - run: npm run build-location-data
       - run: npm run build-standard-data
       - run: npm run build-api
