@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-csv": "node src/build-csv.js && npm run build-csv:nkf",
-    "build-csv:nkf": "find data -type f -exec nkf -w --overwrite {} \\;",
+    "build-csv:nkf": "find data -type f -name \"*.csv\" -exec nkf -w --overwrite {} \\;",
     "build-location-data": "node src/build-location-data.js",
     "build-standard-data": "node src/build-standard-data.js",
     "build-readme": "node src/build-readme.js",
