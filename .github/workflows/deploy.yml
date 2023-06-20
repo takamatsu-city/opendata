@@ -17,13 +17,13 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - run: npm install
+      - run: npm ci
       # gitに日本語ファイル名に対応させる。
       - run: git config --global core.quotepath false
 
       - run: sudo apt-get install -y nkf
-      - run: find data -type f -exec nkf -w --overwrite {} \;
 
+      - run: npm run build-csv
       - run: npm run build-location-data
       - run: npm run build-standard-data
       - run: npm run build-api
@@ -76,6 +76,35 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  pushcsv:
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # All history
+
+      - run: sudo apt-get install -y nkf
+      - run: npm ci
+
+      - run: npm run build-csv
+      - run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Actions"
+
+          git add data/**/*.csv
+
+          if [[ -n "$(git diff --cached)" ]]; then
+            git commit --message="CSV をアップデート"
+            git push origin main
+          fi
 
   backup:
     if: github.ref == 'refs/heads/main'
