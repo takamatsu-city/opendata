@@ -1,3 +1,3 @@
-#property,latitude,longitude,name,address,telephoneNumber,referenceObject,note,availableDate,startTime,endTime,availableDateNote
-1,34.33998,134.05955,たかまつファミリー・サポート・センター,高松市松島町一丁目１５番１号  （たかまつミライエ３階）,087-833-2226,http://happy192.com,,月水木金土日,09:00,17:00,
-2,34.29170722,134.1199475,児童養護施設　讃岐学園,高松市前田東町569-2,087-847-5171,http://www.kouzenkai.jp/sanukigakuen/,,,,,
+"#property","latitude","longitude","name","address","telephoneNumber","referenceObject","note","availableDate","startTime","endTime","availableDateNote"
+"1","34.33998","134.05955","たかまつファミリー・サポート・センター","高松市松島町一丁目１５番１号  （たかまつミライエ３階）","087-833-2226","http://happy192.com",,"月水木金土日","09:00","17:00",
+"2","34.29170722","134.1199475","児童養護施設　讃岐学園","高松市前田東町569-2","087-847-5171","http://www.kouzenkai.jp/sanukigakuen/",,,,,
