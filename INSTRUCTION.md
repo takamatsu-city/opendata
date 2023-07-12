@@ -23,9 +23,9 @@
 
 ### 3. 設定ファイルを更新
 
-- 位置情報があるデータの場合は、[`location-data-categories.json`](https://github.com/takamatsu-city/opendata/blob/main/src/location-data-categories.json)
-- 位置情報がないデータの場合は、[`standard-data-categories.json`](https://github.com/takamatsu-city/opendata/blob/main/src/standard-data-categories.json)
-- PDFのデータの場合は、[`pdf-data-categories.json`](https://github.com/takamatsu-city/opendata/blob/main/src/pdf-data-categories.json)
+- 位置情報があるデータの場合は、[`location-data-categories.json`](https://github.com/takamatsu-city/opendata/blob/main/src/location-data-categories.json) [ファイルを開く](https://github.com/takamatsu-city/opendata/blob/main/src/location-data-categories.json)
+- 位置情報がないデータの場合は、[`standard-data-categories.json`](https://github.com/takamatsu-city/opendata/blob/main/src/standard-data-categories.json)[ファイルを開く](https://github.com/takamatsu-city/opendata/blob/main/src/standard-data-categories.json)
+- PDFのデータの場合は、[`pdf-data-categories.json`](https://github.com/takamatsu-city/opendata/blob/main/src/pdf-data-categories.json)[ファイルを開く](https://github.com/takamatsu-city/opendata/blob/main/src/pdf-data-categories.json)
 
 ```
 {
