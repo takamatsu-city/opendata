@@ -10,7 +10,7 @@
 - ディレクトリ名を入力して下さい。
 <img width="1254" alt="スクリーンショット 2023-05-18 17 06 00" src="https://github.com/takamatsu-city/opendata/assets/8760841/25a9bfcd-2473-47df-822a-d5c0bb3236ff">
 
-- 「Create new branch ...」 にチェックを入れ、「Propose changes」 をクリックして下さい。
+- 「Create new branch ...」 にチェックを入れ、「Propose changes」 をクリックして下さい。<p style="color:red;">注意：「Commit directly to the main branch.」にチェックを入れないで下さい。</p>
 
 <img width="1255" alt="スクリーンショット 2023-05-18 17 05 48" src="https://github.com/takamatsu-city/opendata/assets/8760841/5cf38811-2901-4953-b75a-3faa9d448eeb">
 
