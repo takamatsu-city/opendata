@@ -13,6 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+      id-token: write
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -28,6 +32,19 @@ jobs:
       - run: npm run build-standard-data
       - run: npm run build-api
       - run: npm run build-data-updates
+
+      - name: Update README
+        if: github.event_name == 'pull_request'
+        run: |
+          npm run build-readme
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          if ! git diff --quiet README.md; then \
+            git checkout $GITHUB_HEAD_REF; \
+            git add README.md; \
+            git commit -m "Update README"; \
+            git push; \
+          fi
 
       - uses: actions/upload-artifact@v3
         if: github.ref == 'refs/heads/main'
