@@ -95,7 +95,7 @@ jobs:
         uses: actions/deploy-pages@v1
 
   pushcsv:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref != 'refs/heads/main'
     needs:
       - build
     runs-on: ubuntu-latest
@@ -113,14 +113,17 @@ jobs:
 
       - run: npm run build-csv
       - run: |
+          git switch "${GITHUB_HEAD_REF}"
+
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Actions"
 
           git add data/**/*.csv
 
           if [[ -n "$(git diff --cached)" ]]; then
+            git fetch origin
             git commit --message="CSV をアップデート"
-            git push origin main
+            git push origin "${GITHUB_HEAD_REF}"
           fi
 
   backup:
