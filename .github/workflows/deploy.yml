@@ -95,7 +95,7 @@ jobs:
         uses: actions/deploy-pages@v1
 
   pushcsv:
-    if: github.ref != 'refs/heads/main'
+    if: github.event_name == 'pull_request'
     needs:
       - build
     runs-on: ubuntu-latest
