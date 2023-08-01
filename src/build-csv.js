@@ -39,8 +39,10 @@ const excel2csv = async (excelPath) => {
           const csv = await excel2csv(excelPath);
           await writeFile(csvPath, csv);
         } catch (err) {
+          console.error(`Error: Excel ファイル ${excelPath} を CSV に変換できませんでした。`);
+
           if (err.message === "FILE_ENDED") {
-            console.error(`Error: Excel ファイル ${excelPath} を読み取れませんでした。データが空になっているか、Excel ファイルが破損している可能性があります。`);
+            console.error("データが空になっているか、Excel ファイルが破損している可能性があります。");
           }
           throw err;
         }
