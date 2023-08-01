@@ -35,8 +35,15 @@ const excel2csv = async (excelPath) => {
       const csvPath = join(dirname(excelPath), `${basename(excelPath, ".xlsx")}.csv`);
 
       promises.push((async () => {
-        const csv = await excel2csv(excelPath);
-        await writeFile(csvPath, csv);
+        try {
+          const csv = await excel2csv(excelPath);
+          await writeFile(csvPath, csv);
+        } catch (err) {
+          if (err.message === "FILE_ENDED") {
+            console.error(`Error: Excel ファイル ${excelPath} を読み取れませんでした。データが空になっているか、Excel ファイルが破損している可能性があります。`);
+          }
+          throw err;
+        }
       })());
     }
   }
