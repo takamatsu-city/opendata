@@ -45,8 +45,8 @@ jobs:
             git commit -m "Update README"; \
             git push; \
           fi
-          exit 0
-
+          exit $?
+          
       - uses: actions/upload-artifact@v3
         if: github.ref == 'refs/heads/main'
         with:
@@ -126,7 +126,7 @@ jobs:
             git commit --message="CSV をアップデート"
             git push origin "${GITHUB_HEAD_REF}"
           fi
-          exit 0
+          exit $?
 
   backup:
     if: github.ref == 'refs/heads/main'
