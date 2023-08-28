@@ -1,5 +1,5 @@
 "#property","code","prefName","cityName","dataName","category","format","url","apiSupport","license","note"
-"1","37201","香川県","高松市","高松市　環境施設","くらし","xlsx,text,RDF,データモデル定義","https://opendata.smartcity-takamatsu.jp/ckan/dataset/environmental_facilities","有","CCライセンス",
+"0","37201","香川県","高松市","高松市　環境施設","くらし","xlsx,text,RDF,データモデル定義","https://opendata.smartcity-takamatsu.jp/ckan/dataset/environmental_facilities","有","CCライセンス",
 "2","37201","香川県","高松市","高松市　AED設置場所","くらし","xlsx,text,RDF,データモデル定義","https://opendata.smartcity-takamatsu.jp/ckan/dataset/aed_location","有","CCライセンス",
 "3","37201","香川県","高松市","市民活動・男女共同参画施設","くらし","xlsx,text,RDF,データモデル定義","https://opendata.smartcity-takamatsu.jp/ckan/dataset/citizen_activity_facility","有","CCライセンス",
 "4","37201","香川県","高松市","高松市　コミュニティセンター","くらし","xlsx,text,RDF,データモデル定義","https://opendata.smartcity-takamatsu.jp/ckan/dataset/community_center","有","CCライセンス",
