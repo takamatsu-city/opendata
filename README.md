@@ -128,3 +128,5 @@
 | --- | --- |
 | 小中学校通学区域情報 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/school_area_information) |
 | 令和2年度市民満足度アンケート結果 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/citizen_satisfaction_questionnaire_result_r2) |
+## 備考
+- Excelに入力された日付（セル書式：日付、ユーザー定義）は、`m/d/yy` 形式で CSV に出力されます。ご注意ください。

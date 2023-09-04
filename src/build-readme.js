@@ -65,6 +65,9 @@ class BuildReadme {
     readme += "| 小中学校通学区域情報 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/school_area_information) |\n";
     readme += "| 令和2年度市民満足度アンケート結果 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/citizen_satisfaction_questionnaire_result_r2) |\n";
 
+    readme += "## 備考\n";
+    readme += "- Excelに入力された日付（セル書式：日付、ユーザー定義）は、`m/d/yy` 形式で CSV に出力されます。ご注意ください。"
+
     fs.writeFileSync("README.md" , readme);
   }
 }
