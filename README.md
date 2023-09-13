@@ -118,11 +118,11 @@
 | 国民健康保険被保険者数(0096) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_national_health_insurers) | [CSV](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.csv) | [JSON](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.json) |
 | 令和2年度市税決算状況(0097) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/city_tax_settlement_status_r2) | [CSV](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.csv) | [JSON](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.json) |
 | オープンデータ一覧(0099) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/open_data_list) | [CSV](https://opendata.takamatsu-fact.com/open_data_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/data.json) |
+| 理容所新規開設一覧(0100) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_barber_shops) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.json) |
 | 美容所新規開設一覧(0101) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_beauty_salons) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.json) |
 | クリーニング所新規開設一覧(0102) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_cleanings) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.json) |
 | 旅館業新規開設一覧(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
 | 公衆浴場新規開設一覧(0104) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_public_baths) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_public_baths/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_public_baths/data.json) |
-| 理容所新規開設一覧(0100) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_barber_shops) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.json) |
 
 
 | データ名 | PDF |
