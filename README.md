@@ -118,6 +118,7 @@
 | 国民健康保険被保険者数(0096) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_national_health_insurers) | [CSV](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.csv) | [JSON](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.json) |
 | 令和2年度市税決算状況(0097) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/city_tax_settlement_status_r2) | [CSV](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.csv) | [JSON](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.json) |
 | オープンデータ一覧(0099) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/open_data_list) | [CSV](https://opendata.takamatsu-fact.com/open_data_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/data.json) |
+| 理容所新規開設一覧(0100) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_barber_shops) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.json) |
 | 美容所新規開設一覧(0101) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_beauty_salons) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.json) |
 | クリーニング所新規開設一覧(0102) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_cleanings) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.json) |
 | 旅館業新規開設一覧(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
@@ -128,3 +129,6 @@
 | --- | --- |
 | 小中学校通学区域情報 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/school_area_information) |
 | 令和2年度市民満足度アンケート結果 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/citizen_satisfaction_questionnaire_result_r2) |
+## 備考
+- Excel から CSV に変換する際、CSVに出力される値は、Excel のセル書式で指定された値が出力されます。
+- 日付（セル書式：日付、ユーザー定義）については、`m/d/yy` 形式で CSV に出力されます。ご注意ください。
