@@ -5,6 +5,10 @@ on:
     branches:
       - main
   pull_request:
+    types: 
+      - opened
+      - synchronize
+      - reopened
     branches:
       - "*"
   workflow_dispatch:
@@ -51,6 +55,52 @@ jobs:
         with:
           name: build
           path: build
+
+  comment-diff:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+      issues: write
+      pull-requests: write
+
+    steps:
+    - name: Checkout main branch into main_branch_content directory
+      uses: actions/checkout@v2
+      with:
+        ref: main
+        path: main_branch_content/
+
+    - name: install nkf
+      run: |
+        sudo apt-get install -y nkf
+
+    - name: Build CSV for main branch
+      run: |
+        cd main_branch_content/
+        npm ci
+        npm run build-csv
+
+    - name: Checkout current branch into current_branch_content directory
+      uses: actions/checkout@v2
+      with:
+        path: current_branch_content/
+
+    - name: Build CSV for current branch
+      run: |
+        cd current_branch_content/
+        npm ci
+        npm run build-csv
+
+    - name: Add comment to show CSV diff
+      run: |
+        chmod +x ./current_branch_content/src/csvdiff.sh
+        ./current_branch_content/src/csvdiff.sh
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: "${{ github.repository_owner }}/${{ github.event.repository.name }}"
 
   deploy:
     if: github.ref == 'refs/heads/main'
