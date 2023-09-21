@@ -64,6 +64,7 @@ jobs:
       id-token: write
       contents: read
       issues: write
+      pull-requests: write
 
     steps:
     - name: Checkout main branch into main_branch_content directory
