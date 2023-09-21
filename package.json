@@ -13,7 +13,8 @@
     "build-api": "node src/build-api.js",
     "build-data-updates": "node src/build-data-updates.js",
     "convert-location-data": "node src/convert-location-data.js",
-    "convert-standard-data": "node src/convert-standard-data.js"
+    "convert-standard-data": "node src/convert-standard-data.js",
+    "csvdiff": "./src/csvdiff.sh"
   },
   "repository": {
     "type": "git",
