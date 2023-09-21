@@ -76,5 +76,6 @@
   { "category": "reservoir_list", "name": "ため池一覧", "filename": "0082.xlsx", "description": "" },
   { "category": "recycling_box_installation_location", "name": "使用済小型家電リサイクルBOX設置場所一覧", "filename": "0086.xlsx", "description": "" },
   { "category": "children_club", "name": "民間放課後児童クラブ", "filename": "0094.xlsx", "description": "" },
-  { "category": "list_of_designated_collection_bag_dealers", "name": "指定収集袋取扱店一覧", "filename": "0098.xlsx", "description": "" }
+  { "category": "list_of_designated_collection_bag_dealers", "name": "指定収集袋取扱店一覧", "filename": "0098.xlsx", "description": "" },
+  { "category": "rural_park", "name": "農村公園", "filename": "0107.xlsx", "description": "" }
 ]

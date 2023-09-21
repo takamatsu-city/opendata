@@ -45,7 +45,6 @@ jobs:
             git commit -m "Update README"; \
             git push; \
           fi
-          exit $? # need for passing GitHub Branch Protection
 
       - uses: actions/upload-artifact@v3
         if: github.ref == 'refs/heads/main'
@@ -94,39 +93,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-  pushcsv:
-    if: github.event_name == 'pull_request'
-    needs:
-      - build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      id-token: write
-
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # All history
-
-      - run: sudo apt-get install -y nkf
-      - run: npm ci
-
-      - run: npm run build-csv
-      - run: |
-          git switch "${GITHUB_HEAD_REF}"
-
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Actions"
-
-          git add data/**/*.csv
-
-          if [[ -n "$(git diff --cached)" ]]; then
-            git fetch origin
-            git commit --message="CSV をアップデート"
-            git push origin "${GITHUB_HEAD_REF}"
-          fi
-          exit $? # need for passing GitHub Branch Protection
 
   backup:
     if: github.ref == 'refs/heads/main'

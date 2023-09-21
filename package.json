@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build-csv": "node src/build-csv.js && npm run build-csv:nkf",
     "build-csv:nkf": "type nkf && find data -type f -name \"*.csv\" -exec nkf -w --overwrite {} \\;",
     "build-location-data": "node src/build-location-data.js",
@@ -34,6 +34,9 @@
     "klaw": "^4.1.0",
     "papaparse": "^5.4.1",
     "read-excel-file": "^5.6.1",
-    "xlsx": "^0.18.5"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4"
   }
 }
