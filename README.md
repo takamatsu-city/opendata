@@ -90,6 +90,7 @@
 | 使用済小型家電リサイクルBOX設置場所一覧(0086) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/recycling_box_installation_location) | [CSV](https://opendata.takamatsu-fact.com/recycling_box_installation_location/data.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/recycling_box_installation_location/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://opendata.takamatsu-fact.com/recycling_box_installation_location/data.csv) |
 | 民間放課後児童クラブ(0094) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/children_club) | [CSV](https://opendata.takamatsu-fact.com/children_club/data.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/children_club/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://opendata.takamatsu-fact.com/children_club/data.csv) |
 | 指定収集袋取扱店一覧(0098) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/list_of_designated_collection_bag_dealers) | [CSV](https://opendata.takamatsu-fact.com/list_of_designated_collection_bag_dealers/data.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/list_of_designated_collection_bag_dealers/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://opendata.takamatsu-fact.com/list_of_designated_collection_bag_dealers/data.csv) |
+| 農村公園(0107) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/rural_park) | [CSV](https://opendata.takamatsu-fact.com/rural_park/data.csv) |[GeoJSON](https://opendata.takamatsu-fact.com/rural_park/data.geojson) | [編集](https://geolonia.github.io/opendata-editor/?data=https://opendata.takamatsu-fact.com/rural_park/data.csv) |
 
 以下のデータは位置情報を含まないデータです。
 
@@ -117,12 +118,17 @@
 | 国民健康保険被保険者数(0096) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/number_of_national_health_insurers) | [CSV](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.csv) | [JSON](https://opendata.takamatsu-fact.com/number_of_national_health_insurers/data.json) |
 | 令和2年度市税決算状況(0097) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/city_tax_settlement_status_r2) | [CSV](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.csv) | [JSON](https://opendata.takamatsu-fact.com/city_tax_settlement_status_r2/data.json) |
 | オープンデータ一覧(0099) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/open_data_list) | [CSV](https://opendata.takamatsu-fact.com/open_data_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/open_data_list/data.json) |
+| 理容所新規開設一覧(0100) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_barber_shops) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_barber_shops/data.json) |
 | 美容所新規開設一覧(0101) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_beauty_salons) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_beauty_salons/data.json) |
 | クリーニング所新規開設一覧(0102) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_cleanings) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_cleanings/data.json) |
 | 旅館業新規開設一覧(0103) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_hostels) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_hostels/data.json) |
+| 公衆浴場新規開設一覧(0104) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_public_baths) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_public_baths/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_public_baths/data.json) |
 
 
 | データ名 | PDF |
 | --- | --- |
 | 小中学校通学区域情報 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/school_area_information) |
 | 令和2年度市民満足度アンケート結果 | [PDF](https://github.com/takamatsu-city/opendata/tree/main/data/citizen_satisfaction_questionnaire_result_r2) |
+## 備考
+- Excel から CSV に変換する際、CSVに出力される値は、Excel のセル書式で指定された値が出力されます。
+- 日付（セル書式：日付、ユーザー定義）については、`m/d/yy` 形式で CSV に出力されます。ご注意ください。
