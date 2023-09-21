@@ -1,32 +1,20 @@
 const { writeFile } = require('fs/promises');
 const klaw = require('klaw');
-const Papa = require('papaparse');
 const { basename, dirname, join } = require('path');
-const readXlsxFile = require('read-excel-file/node');
+const XLSX = require('xlsx');
 
 const excel2csv = async (excelPath) => {
-  let rows = await readXlsxFile(excelPath);
 
-  rows = rows.filter(row => { // remove empty lines ― This is required because Papaparse does not elimitate the row with all null cells
-    if (!Array.isArray(row)) {
-      return false;
-    }
+  const workbook = XLSX.readFile(excelPath, {cellNF: true, cellText: true, cellDates: true});
+  const sheetName = workbook.SheetNames[0];
+  const sheet = workbook.Sheets[sheetName];
 
-    for (const cell of row) {
-      if (cell) {
-        return true;
-      }
-    }
-
-    return false;
-  });
-
-  const csv = Papa.unparse(rows, { quotes: true, skipEmptyLines: true });
+  const csv = XLSX.utils.sheet_to_csv(sheet, { FS: ',', RS: '\r\n', blankrows: false, forceQuotes: true});
 
   return csv.endsWith("\r\n") || csv.endsWith("\n") ? csv : csv + "\r\n";
 };
 
-(async () => {
+const main = async () => {
   const promises = [];
 
   for await (const file of klaw(join(__dirname, "../data"), { depthLimit: -1 })) {
@@ -51,6 +39,11 @@ const excel2csv = async (excelPath) => {
   }
 
   await Promise.all(promises);
-})();
+}
 
-module.exports = { excel2csv };
+if (require.main === module) {
+  main();
+} else {
+  module.exports = { excel2csv };
+}
+
