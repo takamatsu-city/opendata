@@ -20,6 +20,8 @@ jobs:
     permissions:
       contents: write
       id-token: write
+      issues: write
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v3
@@ -31,7 +33,10 @@ jobs:
 
       - run: sudo apt-get install -y nkf
 
+      - run: npm run test
       - run: npm run build-csv
+        continue-on-error: true
+        id: build-step
       - run: npm run build-location-data
       - run: npm run build-standard-data
       - run: npm run build-api
@@ -55,6 +60,26 @@ jobs:
         with:
           name: build
           path: build
+                    
+      - name: Comment PR if build fails
+        id: comment-build-error
+        if: steps.build-step.outcome == 'failure'
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const issue_number = context.issue.number;
+            const message = `## エラー：Excel の変換に失敗しました\n アップロードした Excel ファイルにデータが含まれていないか、壊れている可能性があります。再度ご確認ください。`;
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: message
+            });
+ 
+      - name: Exit with failure
+        if: steps.build-step.outcome == 'failure'
+        run: exit 1
 
   comment-diff:
     if: github.event_name == 'pull_request'
