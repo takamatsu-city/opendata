@@ -61,7 +61,7 @@ jobs:
           name: build
           path: build
                     
-      - name: Comment PR if build fails
+      - name: Comment to PR if build fails
         id: comment-build-error
         if: steps.build-step.outcome == 'failure'
         uses: actions/github-script@v5
