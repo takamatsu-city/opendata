@@ -18,8 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
       id-token: write
+      contents: read
+      issues: write
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v3
@@ -31,7 +33,10 @@ jobs:
 
       - run: sudo apt-get install -y nkf
 
+      - run: npm run test
       - run: npm run build-csv
+        continue-on-error: true
+        id: build-step
       - run: npm run build-location-data
       - run: npm run build-standard-data
       - run: npm run build-api
@@ -55,6 +60,26 @@ jobs:
         with:
           name: build
           path: build
+                    
+      - name: Comment PR if build fails
+        id: comment-build-error
+        if: steps.build-step.outcome == 'failure'
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const issue_number = context.issue.number;
+            const message = `## エラー：Excel の変換に失敗しました\n アップロードした Excel ファイルにデータが含まれていないか、壊れている可能性があります。再度ご確認ください。`;
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: message
+            });
+ 
+      - name: Exit with failure
+        if: steps.build-step.outcome == 'failure'
+        run: exit 1
 
   comment-diff:
     if: github.event_name == 'pull_request'
@@ -144,29 +169,29 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 
-  # backup:
-  #   if: github.ref == 'refs/heads/main'
+  backup:
+    if: github.ref == 'refs/heads/main'
 
-  #   runs-on: ubuntu-latest
-  #   # Allow write on id-token so we can use it to authenticate to AWS
-  #   permissions:
-  #     contents: read
-  #     id-token: write
+    runs-on: ubuntu-latest
+    # Allow write on id-token so we can use it to authenticate to AWS
+    permissions:
+      contents: read
+      id-token: write
 
-  #   steps:
-  #     - uses: actions/checkout@v3
+    steps:
+      - uses: actions/checkout@v3
 
-  #     - name: Set current datetime as env variable
-  #       env:
-  #         TZ: "Asia/Tokyo"
-  #       run: echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+      - name: Set current datetime as env variable
+        env:
+          TZ: "Asia/Tokyo"
+        run: echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
 
-  #     - name: Configure AWS credentials
-  #       uses: aws-actions/configure-aws-credentials@v2
-  #       with:
-  #         role-to-assume: arn:aws:iam::584344484091:role/takamatsu_github_s3_backup
-  #         aws-region: ap-northeast-1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::584344484091:role/takamatsu_github_s3_backup
+          aws-region: ap-northeast-1
 
-  #     - name: Backup data folder to S3 bucket
-  #       run: |
-  #         aws s3 sync data s3://takamatsu-city-opendata-backup-ap-northeast-1/${{ env.CURRENT_DATETIME }}
+      - name: Backup data folder to S3 bucket
+        run: |
+          aws s3 sync data s3://takamatsu-city-opendata-backup-ap-northeast-1/${{ env.CURRENT_DATETIME }}

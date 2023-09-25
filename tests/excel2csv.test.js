@@ -26,4 +26,9 @@ describe('excel2csv function tests', () => {
     expect(endTime2).toBe('"23:00"');
   });
 
+  // excelファイルが破損している場合 エラーを返す
+  it('should throw error when Excel file is broken', async () => {
+    await expect(excel2csv(path.join(__dirname, './fixtures/broken.xlsx'))).rejects.toThrow('FILE_ENDED');
+  });
+
 });
