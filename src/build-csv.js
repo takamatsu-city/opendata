@@ -11,6 +11,10 @@ const excel2csv = async (excelPath) => {
 
   const csv = XLSX.utils.sheet_to_csv(sheet, { FS: ',', RS: '\r\n', blankrows: false, forceQuotes: true});
 
+  if (csv === "") {
+    throw new Error("FILE_ENDED");
+  }
+
   return csv.endsWith("\r\n") || csv.endsWith("\n") ? csv : csv + "\r\n";
 };
 
@@ -46,4 +50,3 @@ if (require.main === module) {
 } else {
   module.exports = { excel2csv };
 }
-
