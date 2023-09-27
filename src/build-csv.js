@@ -2,7 +2,6 @@ const { writeFile } = require('fs/promises');
 const klaw = require('klaw');
 const { basename, dirname, join } = require('path');
 const XLSX = require('xlsx');
-const fs = require('fs');
 
 const excel2csv = async (excelPath) => {
 
@@ -34,7 +33,7 @@ const main = async () => {
         } catch (err) {
           console.error(`Error: Excel ファイル ${excelPath} を CSV に変換できませんでした。`);
           
-          fs.writeFileSync('error-file.txt', excelPath);
+          await writeFile('error-file.txt', excelPath);
 
           if (err.message === "FILE_ENDED") {
             console.error("データが空になっているか、Excel ファイルが破損している可能性があります。");
