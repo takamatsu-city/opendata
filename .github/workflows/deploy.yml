@@ -41,22 +41,12 @@ jobs:
       - name: Comment to PR if build fails
         id: comment-build-error
         if: steps.build-step.outcome == 'failure'
-        uses: actions/github-script@v5
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const issue_number = context.issue.number;
-            const message = `## エラー：Excel の変換に失敗しました\n アップロードした Excel ファイルにデータが含まれていないか、壊れている可能性があります。再度ご確認ください。`;
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue_number,
-              body: message
-            });
- 
-      - name: Exit with failure
-        if: steps.build-step.outcome == 'failure'
-        run: exit 1
+        run: ./src/errorFiles.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: "${{ github.repository_owner }}"
+          REPO: "${{ github.event.repository.name }}"
+          BRANCH: "${{ github.event.pull_request.head.ref }}"
 
       - run: npm run build-location-data
       - run: npm run build-standard-data
@@ -121,9 +111,7 @@ jobs:
         npm run build-csv
 
     - name: Add comment to show CSV diff
-      run: |
-        chmod +x ./current_branch_content/src/csvdiff.sh
-        ./current_branch_content/src/csvdiff.sh
+      run: ./current_branch_content/src/csvdiff.sh
       env:
         GH_TOKEN: ${{ github.token }}
         REPO: "${{ github.repository_owner }}/${{ github.event.repository.name }}"

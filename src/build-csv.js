@@ -32,6 +32,8 @@ const main = async () => {
           await writeFile(csvPath, csv);
         } catch (err) {
           console.error(`Error: Excel ファイル ${excelPath} を CSV に変換できませんでした。`);
+          
+          await writeFile('error-file.txt', excelPath);
 
           if (err.message === "FILE_ENDED") {
             console.error("データが空になっているか、Excel ファイルが破損している可能性があります。");
