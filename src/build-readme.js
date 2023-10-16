@@ -44,7 +44,11 @@ class BuildReadme {
 
         const csvFiles = glob.sync(`data/${category.category}/${category.filename}*.csv`);
         const xlsxFiles = glob.sync(`data/${category.category}/${category.filename}*.xlsx`);
-        const allFiles = csvFiles.concat(xlsxFiles);
+
+        // 配列内に同じファイルがなければ、配列に追加
+        const allFiles = csvFiles.concat(xlsxFiles.filter(file => {
+          return csvFiles.indexOf(file) < 0;
+        }));
 
         allFiles.map(file => {
           
