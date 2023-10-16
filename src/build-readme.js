@@ -17,8 +17,6 @@ class BuildReadme {
     
     for (let i = 0; i < locationDataCategories.length; i++) {
       const category = locationDataCategories[i];
-
-      const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
       
       const csvFolderUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
 
