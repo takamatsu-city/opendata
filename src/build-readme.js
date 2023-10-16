@@ -47,9 +47,11 @@ class BuildReadme {
         const allFiles = csvFiles.concat(xlsxFiles);
 
         allFiles.map(file => {
-          const filename = path.basename(file, '.csv');
+          
+          const filename = path.basename(file, path.extname(file));
           const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
-          const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.csv`;          
+          const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.csv`;
+
           const subCategory = filename.split('_')[1];
           if (file === allFiles[0]) {
             readme += `| ${category.name}(${category.filename}) | [フォルダ](${csvFolderUrl}) | [CSV(${subCategory})](${csvFileUrl}) | [JSON(${subCategory})](${jsonFileUrl}) |\n`;
