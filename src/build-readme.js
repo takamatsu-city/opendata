@@ -18,6 +18,8 @@ class BuildReadme {
     for (let i = 0; i < locationDataCategories.length; i++) {
       const category = locationDataCategories[i];
       
+      const csvFile = glob.sync(`data/${category.category}/*.csv`)[0];
+      
       const csvFolderUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
 
       const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.csv`;
@@ -42,19 +44,18 @@ class BuildReadme {
 
         const csvFiles = glob.sync(`data/${category.category}/${category.filename}*.csv`);
         const xlsxFiles = glob.sync(`data/${category.category}/${category.filename}*.xlsx`);
-        const allFiles = csvFiles.concat(xlsxFiles);
+        const mixedFiles = csvFiles.concat(xlsxFiles);
 
-        // allFiles の データのファイル名から拡張子を削除し、重複を削除する
-        const uniqueAllFiles = [...new Set(allFiles.map(file => path.basename(file, path.extname(file))))];
+        // データのファイル名から拡張子を削除し、重複を削除する
+        const allFileNames = [...new Set(mixedFiles.map(file => path.basename(file, path.extname(file))))];
 
-        uniqueAllFiles.map(file => {
+        allFileNames.map(filename => {
           
-          const filename = path.basename(file, path.extname(file));
           const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.json`;
           const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/${filename}.csv`;
 
           const subCategory = filename.split('_')[1];
-          if (file === uniqueAllFiles[0]) {
+          if (filename === allFileNames[0]) {
             readme += `| ${category.name}(${category.filename}) | [フォルダ](${csvFolderUrl}) | [CSV(${subCategory})](${csvFileUrl}) | [JSON(${subCategory})](${jsonFileUrl}) |\n`;
           } else {
             readme += `||| [CSV(${subCategory})](${csvFileUrl}) | [JSON(${subCategory})](${jsonFileUrl}) |\n`;
