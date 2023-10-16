@@ -1,0 +1,5 @@
+category: evacuation_space
+name: 指定緊急避難場所・指定避難所
+filename: 0060.xlsx
+description: 緊急避難場所および避難所の場所情報
+dataType: location
