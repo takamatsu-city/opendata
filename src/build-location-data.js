@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { parse } = require('csv-parse');
+const { parse } = require('csv-parse/sync');
 const glob = require('glob');
 const path = require('path');
 const csv2geojson = require('csv2geojson');
@@ -23,7 +23,10 @@ for (let i = 0; i < categories.length; i++) {
       const csvString = fs.readFileSync(file, 'utf8');
 
       // 緯度経度のフィールド名を判定
-      const headers = parse(csvString)[0];      
+      const headers = parse(csvString, {
+        skip_empty_lines: true
+      })[0];
+
       let latField = 'latitude';
       let lonField = 'longitude';
       if (headers.includes('緯度')) latField = '緯度';
