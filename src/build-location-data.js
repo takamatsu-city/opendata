@@ -20,7 +20,7 @@ for (let i = 0; i < categories.length; i++) {
 
       const dest = fs.createWriteStream(`${categoryPath}/data.geojson`);
       const csvString = fs.readFileSync(file, 'utf8');
-
+      
       try {
         const { data } = await csvToGeoJSON(csvString);
         dest.write(JSON.stringify(data));
