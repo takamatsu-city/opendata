@@ -22,9 +22,9 @@ for (let i = 0; i < categories.length; i++) {
       const csvString = fs.readFileSync(file, 'utf8');
       
       try {
-        const { data } = await csvToGeoJSON(csvString);
+        const data = await csvToGeoJSON(csvString);
         dest.write(JSON.stringify(data));
-      } catch ({ err }) {
+      } catch (err) {
         console.error(err);
         throw err;
       }
