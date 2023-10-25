@@ -1,8 +1,7 @@
 const fs = require('fs');
-const { parse } = require('csv-parse');
 const glob = require('glob');
 const path = require('path');
-const csv2geojson = require('csv2geojson');
+const csvToGeoJSON = require('./csv-to-geojson.js');
 
 const categories = require('./location-data-categories.json');
 
@@ -18,17 +17,17 @@ for (let i = 0; i < categories.length; i++) {
       if (!fs.existsSync(categoryPath)) {
         fs.mkdirSync(categoryPath, { recursive: true });
       }
+
       const dest = fs.createWriteStream(`${categoryPath}/data.geojson`);
-
       const csvString = fs.readFileSync(file, 'utf8');
-
-      csv2geojson.csv2geojson(csvString, function(err, data) {
-        if (err) {
-          console.error(err);
-          throw err;
-        };
+      
+      try {
+        const data = await csvToGeoJSON(csvString);
         dest.write(JSON.stringify(data));
-      });
+      } catch (err) {
+        console.error(err);
+        throw err;
+      }
 
       if (files.length === 1) {
         fs.copyFileSync(file, `${categoryPath}/data.csv`);

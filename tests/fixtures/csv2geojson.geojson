@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"東京駅"},"geometry":{"type":"Point","coordinates":[139.767125,35.681236]}},{"type":"Feature","properties":{"name":"品川駅"},"geometry":{"type":"Point","coordinates":[139.745433,35.658581]}}]}
