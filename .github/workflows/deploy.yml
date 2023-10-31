@@ -33,6 +33,7 @@ jobs:
 
       - run: sudo apt-get install -y nkf
 
+      - run: npm run build-config-json
       - run: npm run test
       - run: npm run build-csv
         continue-on-error: true

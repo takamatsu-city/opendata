@@ -37,9 +37,11 @@ class BuildReadme {
 
     for (let i = 0; i < standardDataCategories.length; i++) {
       const category = standardDataCategories[i];
+      
       const csvFolderUrl = `https://github.com/takamatsu-city/opendata/tree/main/data/${category.category}`;
       const jsonFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.json`;
       const csvFileUrl = `https://opendata.takamatsu-fact.com/${category.category}/data.csv`;
+      
       if (category.category === "city_planning_basic_survey_information") {
 
         const csvFiles = glob.sync(`data/${category.category}/${category.filename}*.csv`);

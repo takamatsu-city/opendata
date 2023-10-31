@@ -1,0 +1,6 @@
+category: menu_information
+name: 学校給食献立情報
+filename: '0084'
+description: 高松市内の学校の給食情報を毎月更新
+historical: true
+dataType: standard
