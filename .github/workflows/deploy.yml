@@ -11,6 +11,7 @@ on:
       - reopened
     branches:
       - "*"
+    # GitHub Action から README を更新時に差分のコメントを再度投稿しないようにする
     paths-ignore:
       - "README.md"
   workflow_dispatch:
