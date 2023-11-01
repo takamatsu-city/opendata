@@ -1,0 +1,5 @@
+category: aed_location
+name: AED設置場所
+filename: 0002.xlsx
+description: AED（自動体外式除細動器）の設置場所情報
+dataType: location

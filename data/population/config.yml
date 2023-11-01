@@ -1,0 +1,6 @@
+category: population
+name: 地域・年齢別人口
+filename: '0066'
+description: 高松市内の町別、性別別、年齢別の人口情報
+historical: true
+dataType: standard
