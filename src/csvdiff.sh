@@ -19,14 +19,8 @@ $(diff --unified -r main_branch_content/data/ current_branch_content/data/)
 ※現行のデータから、赤の行が削除され、緑の行が追加されます。
 __COMMENT1__
 
-
-diff_output=$(diff --unified -r main_branch_content/data/ current_branch_content/data/)
-
-if [[ -n "$diff_output" ]]; then
-  has_diff="true"
+if [[ -n "$(diff --unified -r main_branch_content/data/ current_branch_content/data/)" ]]; then
+  exit 0
 else
-  has_diff="false"
+  exit 1
 fi
-
-# Set the output variable for the step
-echo "::set-output name=csv_diff::$has_diff"
