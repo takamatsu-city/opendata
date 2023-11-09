@@ -18,9 +18,3 @@ $(diff --unified -r main_branch_content/data/ current_branch_content/data/)
 
 ※現行のデータから、赤の行が削除され、緑の行が追加されます。
 __COMMENT1__
-
-if [[ -n "$(diff --unified -r main_branch_content/data/ current_branch_content/data/)" ]]; then
-  gh pr comment "${PR_ID}" --body-file="./comment.txt" --repo="${REPO}"
-else
-  echo "No CSV update detected. Skipping CSV diff comment."
-fi
