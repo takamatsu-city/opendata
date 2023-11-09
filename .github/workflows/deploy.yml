@@ -11,12 +11,10 @@ on:
       - reopened
     branches:
       - "*"
-    # GitHub Action から README を更新時に差分のコメントを再度投稿しないようにする
-    paths-ignore:
-      - "README.md"
   workflow_dispatch:
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
 
@@ -38,6 +36,7 @@ jobs:
 
       - run: sudo apt-get install -y nkf
 
+      - run: npm run build-config-json
       - run: npm run test
       - run: npm run build-csv
         continue-on-error: true
@@ -58,15 +57,24 @@ jobs:
       - run: npm run build-api
       - run: npm run build-data-updates
 
-      - name: Update README with add-and-commit action
-        uses: EndBug/add-and-commit@v7
+      - run: echo ${{ needs.prepare.outputs.skip }}
+      - run: echo ${{ github.event_name }}
+      - run: echo "$(git log --format=%B -n 1 ${{ github.event.before }})"
+      - run: echo "$(git diff --name-only ${{ github.sha }} ${{ github.event.before }})"
+      
+      - name: Update README
         if: github.event_name == 'pull_request'
-        with:
-          message: "Update README"
-          add: "./README.md"
-          push: true
-          author_name: "geolonia-bot"
-          author_email: "geolonia-bot@users.noreply.github.com"
+        run: |
+          npm run build-readme
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          if ! git diff --quiet README.md; then \
+            git checkout $GITHUB_HEAD_REF; \
+            git add README.md; \
+            git commit -m "Update README By GitHub Actions"; \
+            git push; \
+            echo "Updated README"; \
+          fi
 
       - uses: actions/upload-artifact@v3
         if: github.ref == 'refs/heads/main'
@@ -117,6 +125,20 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
         REPO: "${{ github.repository_owner }}/${{ github.event.repository.name }}"
+
+    - uses: peter-evans/find-comment@v2
+      id: find-comment
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        comment-author: 'github-actions[bot]'
+        body-includes: '今回更新されたデータの CSV 差分は以下の通りです'
+
+    - uses: peter-evans/create-or-update-comment@v3
+      with:
+        comment-id: ${{ steps.find-comment.outputs.comment-id }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body-path: './comment.txt'
+        edit-mode: 'replace'
 
   deploy:
     if: github.ref == 'refs/heads/main'
