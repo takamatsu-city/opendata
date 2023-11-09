@@ -116,9 +116,6 @@ jobs:
 
     - name: Add comment to show CSV diff
       run: ./current_branch_content/src/csvdiff.sh
-      env:
-        GH_TOKEN: ${{ github.token }}
-        REPO: "${{ github.repository_owner }}/${{ github.event.repository.name }}"
 
     - uses: peter-evans/find-comment@v2
       id: find-comment
