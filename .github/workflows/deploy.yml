@@ -68,7 +68,6 @@ jobs:
             git add README.md; \
             git commit -m "Update README By GitHub Actions"; \
             git push; \
-            echo "Updated README"; \
           fi
 
       - uses: actions/upload-artifact@v3
