@@ -57,11 +57,6 @@ jobs:
       - run: npm run build-api
       - run: npm run build-data-updates
 
-      - run: echo ${{ needs.prepare.outputs.skip }}
-      - run: echo ${{ github.event_name }}
-      - run: echo "$(git log --format=%B -n 1 ${{ github.event.before }})"
-      - run: echo "$(git diff --name-only ${{ github.sha }} ${{ github.event.before }})"
-      
       - name: Update README
         if: github.event_name == 'pull_request'
         run: |
