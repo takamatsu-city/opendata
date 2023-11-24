@@ -14,6 +14,7 @@ on:
   workflow_dispatch:
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
 
@@ -27,6 +28,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.GEOLONIA_BOT_PAT_TOKEN }}
+        
       - run: npm ci
       # gitに日本語ファイル名に対応させる。
       - run: git config --global core.quotepath false
@@ -58,12 +61,12 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           npm run build-readme
-          git config --global user.name "${GITHUB_ACTOR}"
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "geolonia-bot"
+          git config --global user.email "geolonia-bot@users.noreply.github.com"
           if ! git diff --quiet README.md; then \
             git checkout $GITHUB_HEAD_REF; \
             git add README.md; \
-            git commit -m "Update README"; \
+            git commit -m "Update README By GitHub Actions"; \
             git push; \
           fi
 
@@ -112,10 +115,25 @@ jobs:
         npm run build-csv
 
     - name: Add comment to show CSV diff
+      id: csv_diff_step
       run: ./current_branch_content/src/csvdiff.sh
-      env:
-        GH_TOKEN: ${{ github.token }}
-        REPO: "${{ github.repository_owner }}/${{ github.event.repository.name }}"
+      continue-on-error: true
+        
+    - uses: peter-evans/find-comment@v2
+      id: find-comment
+      if: steps.csv_diff_step.outcome == 'success'
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        comment-author: 'github-actions[bot]'
+        body-includes: '今回更新されたデータの CSV 差分は以下の通りです'
+
+    - uses: peter-evans/create-or-update-comment@v3
+      if: steps.csv_diff_step.outcome == 'success'
+      with:
+        comment-id: ${{ steps.find-comment.outputs.comment-id }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body-path: './comment.txt'
+        edit-mode: 'replace'
 
   deploy:
     if: github.ref == 'refs/heads/main'

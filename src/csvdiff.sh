@@ -20,7 +20,7 @@ $(diff --unified -r main_branch_content/data/ current_branch_content/data/)
 __COMMENT1__
 
 if [[ -n "$(diff --unified -r main_branch_content/data/ current_branch_content/data/)" ]]; then
-  gh pr comment "${PR_ID}" --body-file="./comment.txt" --repo="${REPO}"
+  exit 0
 else
-  echo "No CSV update detected. Skipping CSV diff comment."
+  exit 1
 fi
