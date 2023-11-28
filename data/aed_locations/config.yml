@@ -1,0 +1,6 @@
+category: "aed_locations"
+name: "AED設置場所"
+filename: "data.xlsx"
+description: ""
+historical: false
+dataType: "location"
