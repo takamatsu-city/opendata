@@ -2,5 +2,5 @@ category: new_permanent_exhibition_hall
 name: 常設興行場新規開設一覧
 filename: '0105'
 description: 
-historical: false
+historical: true
 dataType: standard
