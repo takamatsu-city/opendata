@@ -1,5 +1,32 @@
 const { csv2geojson, guessLonHeader, guessLatHeader } = require('csv2geojson');
 
+function cleanCSV(cols, csv) {
+  let i, clean = "", col = 0;
+
+  for (i = 0; i < csv.length; i++) {
+    // \r\n を除外
+    if (csv[i] === '\r' && csv[i+1] === '\n') {
+      if (col < cols) {
+        i++;
+        continue;
+      } else {
+        col = 0;
+        i++;
+      }
+    }
+    // \n or \r を除外
+    else if (csv[i] === '\n' || csv[i] === '\r') {
+      if (col < cols) continue;
+      else col = 0;
+    }
+    else {
+      clean += csv[i];
+    }
+  }
+  return clean;
+}
+
+
 const csvToGeoJSON = async (csvString) => {
 
   return new Promise((resolve, reject) => {
@@ -8,8 +35,17 @@ const csvToGeoJSON = async (csvString) => {
       delimiter: ','
     }
 
-    const lines = csvString.trim().split(/\r?\n|\r/);
-    const headers = lines[0].split(',');
+    let lines = csvString.trim().split(/\r?\n|\r/);
+    const firstLine = lines[0].split(options.delimiter)
+    const cols = firstLine.length - 1;
+    
+    // 値内の改行を削除
+    lines = cleanCSV(cols, csvString).trim().split(/\r?\n|\r/);
+
+    // header行を取得。ダブルクォーテーションを削除
+    const headers = firstLine.map((header) => {
+      return header.replace(/"/g, '');
+    });
 
     if (headers.includes('緯度') && headers.includes('経度')) {
       options.latfield = '緯度';
@@ -38,8 +74,10 @@ const csvToGeoJSON = async (csvString) => {
     const filteredCsv = lines.filter((line, index) => {
       // ヘッダー行は無視
       if (index === 0) return true;
+
       const cells = line.split(options.delimiter);
-      return cells[latIndex].trim() !== '' && cells[lonIndex].trim() !== '';
+
+      return cells[latIndex] !== '' && cells[lonIndex] !== '';
     }).join('\n');
 
     csv2geojson(filteredCsv, options,
