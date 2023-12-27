@@ -1,4 +1,4 @@
-const csv2geojson = require('csv2geojson');
+const { csv2geojson, guessLonHeader, guessLatHeader } = require('csv2geojson');
 
 const csvToGeoJSON = async (csvString) => {
 
@@ -8,13 +8,34 @@ const csvToGeoJSON = async (csvString) => {
       delimiter: ','
     }
 
-    const headers = csvString.split(/\r?\n|\r/)[0];
+    const lines = csvString.trim().split(/\r?\n|\r/);
+    const headers = lines[0].split(',');
+
     if (headers.includes('緯度') && headers.includes('経度')) {
       options.latfield = '緯度';
       options.lonfield = '経度';
+    } else {
+      options.latfield = guessLatHeader(csvString);
+      options.lonfield = guessLonHeader(csvString);
     }
 
-    csv2geojson.csv2geojson(csvString, options,
+    const latIndex = headers.indexOf(options.latfield);
+    const lonIndex = headers.indexOf(options.lonfield);
+
+    if (latIndex === -1 || lonIndex === -1) {
+      reject(new Error("緯度経度のヘッダーが見つかりませんでした。"));
+      return;
+    }
+
+    // 緯度経度が空の行を削除
+    const filteredCsv = lines.filter((line, index) => {
+      // ヘッダー行は無視
+      if (index === 0) return true;
+      const cells = line.split(options.delimiter);
+      return cells[latIndex].trim() !== '' && cells[lonIndex].trim() !== '';
+    }).join('\n');
+
+    csv2geojson.csv2geojson(filteredCsv, options,
       (err, data) => {
         if (err) {
           reject(err);
