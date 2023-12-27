@@ -11,12 +11,14 @@ const csvToGeoJSON = async (csvString) => {
     const lines = csvString.trim().split(/\r?\n|\r/);
     const headers = lines[0].split(',');
 
+
+
     if (headers.includes('緯度') && headers.includes('経度')) {
       options.latfield = '緯度';
       options.lonfield = '経度';
     } else {
-      options.latfield = guessLatHeader(csvString);
-      options.lonfield = guessLonHeader(csvString);
+      options.latfield = guessLatHeader(headers);
+      options.lonfield = guessLonHeader(headers);
     }
 
     const latIndex = headers.indexOf(options.latfield);
