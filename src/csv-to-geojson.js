@@ -11,14 +11,19 @@ const csvToGeoJSON = async (csvString) => {
     const lines = csvString.trim().split(/\r?\n|\r/);
     const headers = lines[0].split(',');
 
-
-
     if (headers.includes('緯度') && headers.includes('経度')) {
       options.latfield = '緯度';
       options.lonfield = '経度';
     } else {
-      options.latfield = guessLatHeader(headers);
-      options.lonfield = guessLonHeader(headers);
+
+      // guessLatHeader, guessLonHeader の引数はオブジェクトなので、オブジェクトを作成
+      const headerObj = {};
+      headers.forEach((key, index) => {
+        headerObj[key] = ''
+      });
+
+      options.latfield = guessLatHeader(headerObj);
+      options.lonfield = guessLonHeader(headerObj);
     }
 
     const latIndex = headers.indexOf(options.latfield);
@@ -37,7 +42,7 @@ const csvToGeoJSON = async (csvString) => {
       return cells[latIndex].trim() !== '' && cells[lonIndex].trim() !== '';
     }).join('\n');
 
-    csv2geojson.csv2geojson(filteredCsv, options,
+    csv2geojson(filteredCsv, options,
       (err, data) => {
         if (err) {
           reject(err);
