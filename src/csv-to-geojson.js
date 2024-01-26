@@ -1,4 +1,3 @@
-const csv2geojson = require('csv2geojson');
 const Papa = require('papaparse');
 
 const csvToGeoJSON = async (csvString) => {
@@ -9,11 +8,13 @@ const csvToGeoJSON = async (csvString) => {
       complete: (results) => {
         const latHeaders = ['緯度', 'lat', 'latitude', 'Lat', 'Latitude', 'LAT', 'LATITUDE'];
         const lonHeaders = ['経度', 'lon', 'lng', 'longitude', 'Lon', 'Lng', 'Longitude', 'LON', 'LNG', 'LONGITUDE'];
-        
+
         let latField, lonField;
 
+        const headers = results.meta.fields;
+
         // 緯度・経度のヘッダー名を判定
-        results.meta.fields.forEach(field => {
+        headers.forEach(field => {
           if (latHeaders.includes(field)) {
             latField = field;
           }
@@ -22,40 +23,38 @@ const csvToGeoJSON = async (csvString) => {
           }
         });
 
-        // 緯度・経度に数値以外が含まれるレコードを除外
-        const filteredData = results.data.filter(record => {
-          const latValue = parseFloat(record[latField]);
-          const lonValue = parseFloat(record[lonField]);
-
-          return !isNaN(latValue) && !isNaN(lonValue);
-        });
-
-        // CSVフォーマットに戻す
-        const filteredCsvString = Papa.unparse(filteredData, {
-          quotes: false,
-          delimiter: ',',
-          header: true,
-          newline: '\r\n'
-        });
-
-        let options = {
-          delimiter: ',',
-        };
-
-        if (latField && lonField) {
-          options.latfield = latField;
-          options.lonfield = lonField;
+        if (!latField || !lonField) {
+          reject(new Error("緯度または経度の列が見つかりません。"));
+          return;
         }
 
-        csv2geojson.csv2geojson(filteredCsvString, options,
-          (err, data) => {
-            if (err) {
-              reject(err);
-              return;
+        // GeoJSONオブジェクトを作成
+        const geoJson = {
+          type: "FeatureCollection",
+          features: results.data.map(record => {
+            const latValue = parseFloat(record[latField]);
+            const lonValue = parseFloat(record[lonField]);
+
+            if (isNaN(latValue) || isNaN(lonValue)) {
+              return null;
             }
-            resolve(data);
-          }
-        );
+
+            // recordから緯度・経度のフィールドを削除
+            delete record[latField];
+            delete record[lonField];
+
+            return {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [lonValue, latValue]
+              },
+              properties: record
+            };
+          }).filter(feature => feature !== null)
+        };
+
+        resolve(geoJson);
       },
       error: (err) => {
         reject(err);
