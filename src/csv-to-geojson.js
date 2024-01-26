@@ -7,8 +7,8 @@ const csvToGeoJSON = async (csvString) => {
       header: true,
       skipEmptyLines: true,
       complete: (results) => {
-        const latHeaders = ['緯度', 'lat', 'latitude'];
-        const lonHeaders = ['経度', 'lon', 'lng', 'longitude'];
+        const latHeaders = ['緯度', 'lat', 'latitude', 'Lat', 'Latitude', 'LAT', 'LATITUDE'];
+        const lonHeaders = ['経度', 'lon', 'lng', 'longitude', 'Lon', 'Lng', 'Longitude', 'LON', 'LNG', 'LONGITUDE'];
         
         let latField, lonField;
 
@@ -40,9 +40,12 @@ const csvToGeoJSON = async (csvString) => {
 
         let options = {
           delimiter: ',',
-          latfield: latField,
-          lonfield: lonField
         };
+
+        if (latField && lonField) {
+          options.latfield = latField;
+          options.lonfield = lonField;
+        }
 
         csv2geojson.csv2geojson(filteredCsvString, options,
           (err, data) => {
