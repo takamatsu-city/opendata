@@ -1,28 +1,58 @@
 const csv2geojson = require('csv2geojson');
+const Papa = require('papaparse');
 
 const csvToGeoJSON = async (csvString) => {
-
   return new Promise((resolve, reject) => {
+    Papa.parse(csvString, {
+      header: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        const latHeaders = ['緯度', 'lat', 'latitude'];
+        const lonHeaders = ['経度', 'lon', 'lng', 'longitude'];
+        
+        let latField, lonField;
 
-    let options = {
-      delimiter: ','
-    }
+        // 緯度・経度のヘッダー名を判定
+        results.meta.fields.forEach(field => {
+          if (latHeaders.includes(field)) {
+            latField = field;
+          }
+          if (lonHeaders.includes(field)) {
+            lonField = field;
+          }
+        });
 
-    const headers = csvString.split(/\r?\n|\r/)[0];
-    if (headers.includes('緯度') && headers.includes('経度')) {
-      options.latfield = '緯度';
-      options.lonfield = '経度';
-    }
+        // 緯度・経度の値がある行のみをフィルタリング
+        const filteredData = results.data.filter(record => record[latField] && record[lonField]);
 
-    csv2geojson.csv2geojson(csvString, options,
-      (err, data) => {
-        if (err) {
-          reject(err);
-          return
-        }
-        resolve(data);
+        // CSVフォーマットに戻す
+        const filteredCsvString = Papa.unparse(filteredData, {
+          quotes: false,
+          delimiter: ',',
+          header: true,
+          newline: '\r\n'
+        });
+
+        let options = {
+          delimiter: ',',
+          latfield: latField,
+          lonfield: lonField
+        };
+
+        csv2geojson.csv2geojson(filteredCsvString, options,
+          (err, data) => {
+            if (err) {
+              reject(err);
+              return;
+            }
+            resolve(data);
+          }
+        );
+      },
+      error: (err) => {
+        reject(err);
       }
-    );
+    });
   });
 }
 
