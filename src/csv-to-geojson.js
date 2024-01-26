@@ -22,8 +22,13 @@ const csvToGeoJSON = async (csvString) => {
           }
         });
 
-        // 緯度・経度の値がある行のみをフィルタリング
-        const filteredData = results.data.filter(record => record[latField] && record[lonField]);
+        // 緯度・経度に数値以外が含まれるレコードを除外
+        const filteredData = results.data.filter(record => {
+          const latValue = parseFloat(record[latField]);
+          const lonValue = parseFloat(record[lonField]);
+
+          return !isNaN(latValue) && !isNaN(lonValue);
+        });
 
         // CSVフォーマットに戻す
         const filteredCsvString = Papa.unparse(filteredData, {
