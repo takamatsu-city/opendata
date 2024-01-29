@@ -16,10 +16,10 @@ const csvToGeoJSON = async (csvString) => {
         // 緯度・経度のヘッダー名を判定
         for (const field of headers) {
           
-          if (typeof latField == 'undefined' && latHeaders.includes(field)) {
+          if (typeof latField === 'undefined' && latHeaders.includes(field)) {
             latField = field;
           }
-          if (typeof lonField == 'undefined' && lonHeaders.includes(field)) {
+          if (typeof lonField === 'undefined' && lonHeaders.includes(field)) {
             lonField = field;
           }
         }
