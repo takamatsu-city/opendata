@@ -14,14 +14,15 @@ const csvToGeoJSON = async (csvString) => {
         const headers = results.meta.fields;
 
         // 緯度・経度のヘッダー名を判定
-        headers.forEach(field => {
-          if (latHeaders.includes(field)) {
+        for (const field of headers) {
+          
+          if (typeof latField == 'undefined' && latHeaders.includes(field)) {
             latField = field;
           }
-          if (lonHeaders.includes(field)) {
+          if (typeof lonField == 'undefined' && lonHeaders.includes(field)) {
             lonField = field;
           }
-        });
+        }
 
         if (!latField || !lonField) {
           reject(new Error("緯度または経度の列が見つかりません。"));
