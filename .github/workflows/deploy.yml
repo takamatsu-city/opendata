@@ -76,6 +76,17 @@ jobs:
           name: build
           path: build
 
+      # netlify にデプロイするために、build ディレクトリを gh-pages ブランチに push する
+      - name: Deploy to gh-pages
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config --global user.name "geolonia-bot"
+          git config --global user.email "geolonia-bot@users.noreply.github.com"
+          git checkout -b gh-pages
+          git add build
+          git commit -m "Deploy to gh-pages branch for Netlify"
+          git push origin gh-pages
+
   comment-diff:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
