@@ -85,6 +85,10 @@ jobs:
           git status
           git checkout -b gh-pages || git checkout gh-pages
           git status
+          rm .gitignore
+          echo "node_modules" >> .gitignore
+          echo ".DS_Store" >> .gitignore
+          echo "data_old" >> .gitignore
           git add .
           git commit -m "Deploy to gh-pages branch for Netlify"
           git push origin gh-pages
