@@ -82,7 +82,7 @@ jobs:
         run: |
           git config --global user.name "geolonia-bot"
           git config --global user.email "geolonia-bot@users.noreply.github.com"
-          git checkout gh-pages
+          git checkout -b gh-pages || git checkout gh-pages
           git add .
           git commit -m "Deploy to gh-pages branch for Netlify"
           git push origin gh-pages
