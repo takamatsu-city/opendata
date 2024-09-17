@@ -91,7 +91,7 @@ jobs:
           echo "data_old" >> .gitignore
           git add .
           git commit -m "Deploy to gh-pages branch for Netlify"
-          git push origin gh-pages
+          git push origin gh-pages -f
 
   comment-diff:
     if: github.event_name == 'pull_request'
