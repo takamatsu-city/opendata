@@ -76,7 +76,7 @@ jobs:
           name: build
           path: build
 
-      # netlify にデプロイするために、build ディレクトリを gh-pages ブランチに push する
+      # netlify にデプロイするために、build ディレクトリを gh-pages ブランチに push 
       - name: Deploy to gh-pages
         if: github.ref == 'refs/heads/main'
         run: |
