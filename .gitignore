@@ -1,9 +1,3 @@
 node_modules
-build/**/*.geojson
-build/**/*.json
-build/**/*.csv
 .DS_Store
 data_old
-src/location-data-categories.json
-src/pdf-data-categories.json
-src/standard-data-categories.json

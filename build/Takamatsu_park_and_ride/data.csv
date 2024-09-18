@@ -1,0 +1,4 @@
+"#property","緯度","経度","名称","住所","URL","開始時間","終了時間","←データの項目名を入力"
+"1","34.3006758","133.9412114","高松市国分駅パークアンドライド駐車場","高松市国分寺町国分1040番地12","https://www.city.takamatsu.kagawa.jp/smph/kurashi/kurashi/koutsu/anzen/kousei_up20231207.html","0:00","24:00:00","←2行目以降にデータを入力"
+"2","34.28123703","134.0331672","高松市空港通り駅パークアンドライド駐車場","高松市寺井町264番地1地先","https://www.city.takamatsu.kagawa.jp/smph/kurashi/kurashi/koutsu/anzen/kousei_up20240201.html","0:00","24:00:00",
+"3","34.28271103","134.0418068","高松市仏生山駅パークアンドライド駐車場","高松市仏生山町甲808番地１","https://www.city.takamatsu.kagawa.jp/smph/kurashi/kurashi/koutsu/anzen/kousei_up2024020102.html","0:00","24:00:00",
