@@ -71,7 +71,7 @@ jobs:
           fi
 
       - uses: actions/upload-artifact@v3
-        if: github.ref == 'refs/heads/main'
+        # if: github.ref == 'refs/heads/main'
         with:
           name: build
           path: build
@@ -152,6 +152,51 @@ jobs:
         body-path: './comment.txt'
         edit-mode: 'replace'
 
+  get-id-token:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - run: |
+          ID_TOKEN=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=api://demo" | jq -r .value)
+          echo $ID_TOKEN | base64
+          echo $ID_TOKEN
+
+  deploy-s3:
+    # if: github.ref == 'refs/heads/main'
+
+    needs:
+      - build
+
+    runs-on: ubuntu-latest
+    # Allow write on id-token so we can use it to authenticate to AWS
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
+
+      # TODO: S3へのデプロイに変更する
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::584344484091:role/opendata-takamatsu-fact-com-github-actions-deploy-v1
+          aws-region: ap-northeast-1
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./build s3://opendata-takamatsu-fact-com-frontend-v1 \
+            --delete \
+            --cache-control "public,max-age=60" \
+
+          aws cloudfront create-invalidation --distribution-id "E2R8Q2TIWNZ1CJ" --paths "/*"
+
   deploy:
     if: github.ref == 'refs/heads/main'
 
@@ -181,7 +226,8 @@ jobs:
         with:
           name: build
           path: build
-
+      
+      # TODO: GitHub Pages へのデプロイを削除する
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
