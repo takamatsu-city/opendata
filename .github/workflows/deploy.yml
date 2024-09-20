@@ -71,7 +71,7 @@ jobs:
           fi
 
       - uses: actions/upload-artifact@v3
-        # if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         with:
           name: build
           path: build
@@ -182,7 +182,6 @@ jobs:
           name: build
           path: build
 
-      # TODO: S3へのデプロイに変更する
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
