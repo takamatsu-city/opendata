@@ -1063,5 +1063,10 @@ a {
 }
 
 .section-404__item a {
-  color: #0017c1;
+  color: #015591;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
 }
