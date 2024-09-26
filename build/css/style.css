@@ -1054,3 +1054,14 @@ a {
     margin-bottom: 40px;
   }
 }
+
+.section-404__item {
+  padding: 16px;
+  color: #2B2B2B;
+  max-width: 1120px;
+  margin: auto;
+}
+
+.section-404__item a {
+  color: #0017c1;
+}
