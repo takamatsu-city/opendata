@@ -9,7 +9,8 @@ on:
       - opened
       - synchronize
       - reopened
-
+    branches:
+      - "*"
   workflow_dispatch:
 
 jobs:
@@ -70,7 +71,7 @@ jobs:
           fi
 
       - uses: actions/upload-artifact@v3
-        # if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         with:
           name: build
           path: build
