@@ -9,8 +9,7 @@ on:
       - opened
       - synchronize
       - reopened
-    branches:
-      - "*"
+
   workflow_dispatch:
 
 jobs:
@@ -75,23 +74,6 @@ jobs:
         with:
           name: build
           path: build
-
-      # netlify にデプロイするために、build ディレクトリを gh-pages ブランチに push する
-      - name: Deploy to gh-pages
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git config --global user.name "geolonia-bot"
-          git config --global user.email "geolonia-bot@users.noreply.github.com"
-          git status
-          git checkout -b gh-pages || git checkout gh-pages
-          git status
-          rm .gitignore
-          echo "node_modules" >> .gitignore
-          echo ".DS_Store" >> .gitignore
-          echo "data_old" >> .gitignore
-          git add .
-          git commit -m "Deploy to gh-pages branch for Netlify"
-          git push origin gh-pages -f
 
   comment-diff:
     if: github.event_name == 'pull_request'
@@ -163,7 +145,7 @@ jobs:
           echo $ID_TOKEN
 
   deploy-s3:
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
 
     needs:
       - build
@@ -195,49 +177,6 @@ jobs:
             --cache-control "public,max-age=60" \
 
           aws cloudfront create-invalidation --distribution-id "E2R8Q2TIWNZ1CJ" --paths "/*"
-
-  deploy:
-    if: github.ref == 'refs/heads/main'
-
-    # Allow one concurrent deployment
-    concurrency:
-      group: "pages"
-      cancel-in-progress: true
-
-    needs:
-      - build
-
-    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
-    # environment is not compatible with AWS credentials
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: build
-      
-      # TODO: GitHub Pages へのデプロイを削除する
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "build"
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
 
   backup:
     if: github.ref == 'refs/heads/main'
