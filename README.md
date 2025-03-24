@@ -137,6 +137,7 @@ CSVファイルダウンロード時、文字化けする場合は、xlsxファ�
 | 興行場開設一覧(0105) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/new_permanent_exhibition_hall) | [CSV(最新データ)](https://opendata.takamatsu-fact.com/new_permanent_exhibition_hall/data.csv) | [JSON(最新データ)](https://opendata.takamatsu-fact.com/new_permanent_exhibition_hall/data.json) |
 | 食品等営業許可施設一覧(0108) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/licensed_food_business_facility_list) | [CSV](https://opendata.takamatsu-fact.com/licensed_food_business_facility_list/data.csv) | [JSON](https://opendata.takamatsu-fact.com/licensed_food_business_facility_list/data.json) |
 | Well-Being指標（アンケートデータ）(0112) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/Well-Being-results) | [CSV](https://opendata.takamatsu-fact.com/Well-Being-results/data.csv) | [JSON](https://opendata.takamatsu-fact.com/Well-Being-results/data.json) |
+| 令和4年度購買情報（レシートデータ）(0117) | [フォルダ](https://github.com/takamatsu-city/opendata/tree/main/data/purchasing_information) | [CSV](https://opendata.takamatsu-fact.com/purchasing_information/data.csv) | [JSON](https://opendata.takamatsu-fact.com/purchasing_information/data.json) |
 
 
 | データ名 | PDF |
