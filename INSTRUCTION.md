@@ -65,3 +65,58 @@
 
 <img width="1120" alt="スクリーンショット 2023-05-18 18 12 54" src="https://github.com/takamatsu-city/opendata/assets/8760841/f468a815-3dc4-4dec-af83-bc5064c51bf9">
 
+## データ名称の変更方法
+
+データの表示名を変更したい場合は、以下の2つのファイルを編集して下さい。
+
+### 1. config.yml を編集
+
+- https://github.com/takamatsu-city/opendata/tree/main/data に移動し、名称を変更したいデータのディレクトリを開いて下さい。
+- `config.yml` ファイルを開き、鉛筆マークの「Edit this file」をクリックして下さい。
+- `name:` の値を新しい名称に変更して下さい。
+
+例）「福祉会館・社会福祉協議会」→「社会福祉協議会」に変更する場合：
+
+変更前：
+```yaml
+category: welfare_hall
+name: 福祉会館・社会福祉協議会
+filename: 0054.xlsx
+description: ''
+dataType: location
+```
+
+変更後：
+```yaml
+category: welfare_hall
+name: 社会福祉協議会
+filename: 0054.xlsx
+description: ''
+dataType: location
+```
+
+- `「Create new branch for this commit and start a pull request」` にチェックを入れ、`「Propose changes」` をクリックして下さい。
+
+### 2. README.md を編集
+
+- 同じブランチ上で、[README.md](https://github.com/takamatsu-city/opendata/blob/main/README.md) を開いて下さい。
+- 鉛筆マークの「Edit this file」をクリックし、該当データの表示名を同じように変更して下さい。
+- 編集中のブランチ名が手順1で作成したブランチと同じであることを確認し、「Commit changes」をクリックして下さい。
+
+### 3. Pull Request を作成
+
+- 手順1で自動作成された Pull Request のページを開き、内容を確認して下さい。
+- Geolonia にてレビュー・マージを行います。
+
+## データの削除方法
+
+データの削除は手順がやや複雑なため、**Geolonia（smartcity-support@geolonia.com）へご連絡ください**。以下の情報をお伝えいただければ対応いたします。
+
+- 削除したいデータ名（例：市立病院(0052)）
+
+### （参考）削除時に必要な作業
+
+削除の際は、以下の変更を Pull Request で行います。
+
+1. `data/<ディレクトリ名>/` 内のファイルをすべて削除（`config.yml`、データファイル等）
+2. `README.md` から該当データの行を削除
