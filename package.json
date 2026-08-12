@@ -41,5 +41,8 @@
   },
   "devDependencies": {
     "jest": "^29.6.4"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.8.12"
   }
 }
