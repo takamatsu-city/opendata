@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   .then((response) => {
     return response.json()
   }).then((result) => {
+    const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     let = html = '';
     for (let i = 0; i < 3; i++) {
       const update = result[i];
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       const year = match[1];
       const month = match[2];
       const day = match[3];
-      html += `<dt>${year}/${month}/${day}</dt><dd><a href="https://github.com/takamatsu-city/opendata/tree/main/data/${update.category}">${update.category_name}</a></dd>`;
+      html += `<dt>${year}/${month}/${day}</dt><dd><a href="https://github.com/takamatsu-city/opendata/tree/main/data/${esc(update.category)}">${esc(update.category_name)}</a></dd>`;
     }
     document.getElementById('data-updates').innerHTML = html; 
   })
